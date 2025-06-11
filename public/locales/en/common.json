@@ -1,0 +1,13 @@
+{
+  "navbar": {
+    "deals": "Deals",
+    "howItWorks": "How it works",
+    "about": "About",
+    "contactUs": "Contact us",
+    "viewDeals": "View Deals"
+  },
+  "home": {
+    "welcome": "Welcome to Scale",
+    "subtitle": "Find the best deals for your needs"
+  }
+}
