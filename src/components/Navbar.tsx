@@ -13,17 +13,17 @@ export default function Navbar() {
   };
 
   return (
-    <nav className='px-20'> 
+    <nav className='lg:px-20 px-8'> 
       <div className="flex items-center justify-between w-full py-4">
         {/* Logo */}
         <div className="flex-shrink-0">
-          <Link href="/" className="text-2xl font-bold">
-            <img src="/logo.png" alt="" />
+          <Link href="/">
+            <img src="/logo.png" className='lg:w-60 w-24' alt="" />
           </Link>
         </div>
 
         {/* Desktop Menu - hidden on mobile */}
-        <div className={`hidden md:flex items-center space-x-6 text-[20px] ${pathname === '/' ? 'text-white' : ''}`}>
+        <div className={`hidden md:flex items-center space-x-6 text-xl ${pathname === '/' ? 'text-white' : ''}`}>
           <Link href="/deals" className={`${pathname === '/deals' ? 'text-[#f25550]' : ''} `}>
             Deals
           </Link>
@@ -63,12 +63,12 @@ export default function Navbar() {
           </div>
 
           {/* View Deals Button - always visible */}
-          <Link href={'/deals'} className="bg-[#F15625] text-white px-6 py-4 rounded-sm ml-8 menu-btn leading-[1.2] font-['Outfit-SemiBold']">
+          <Link href={'/deals'} className="bg-[#F15625] text-white lg:px-6 px-4 lg:mr-0 mr-2  lg:py-4 py-2 rounded-sm ml-8 menu-btn leading-[1.2] font-['Outfit-SemiBold']">
             View Live Deals
           </Link>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden">
+          <button className="md:hidden bg-white rounded-sm border-0">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>

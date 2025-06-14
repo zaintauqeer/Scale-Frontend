@@ -1,10 +1,20 @@
-export default function Deals() {
+import React from 'react'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
+import DealOfTheMonth from '@/components/DealOfTheMonth'
+import LiveDeals from '@/components/LiveDeals'
+
+const Deals = () => {
   return (
-    <main className="min-h-screen p-8">
-      <h1 className="text-3xl font-bold mb-6">All Deals</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {/* Add deals grid */}
+    <>
+      <div className='mt-8'>
+        <Navbar/>
       </div>
-    </main>
-  );
+      <DealOfTheMonth/>
+      <LiveDeals/>
+      <Footer/>
+    </>
+  )
 }
+
+export default Deals

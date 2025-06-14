@@ -26,6 +26,12 @@
   font-style: normal;
 }
 @font-face {
+  font-family: 'Outfit-Medium';
+  src: url('/fonts/Outfit-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: 'Outfit-SemiBold';
   src: url('/fonts/Outfit-SemiBold.ttf') format('truetype');
   font-weight: normal;
@@ -45,4 +51,14 @@ body {
   /* background: var(--background);
   color: var(--foreground); */
   font-family: 'Outfit-Regular', sans-serif;
+}
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
 }
