@@ -13,7 +13,7 @@ import SmallBanner from "@/components/SmallBanner";
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <div className="absolute w-full top-16 z-10 left-0">
+      <div className="absolute w-full lg:top-16 top-3 z-10 left-0">
         <Navbar />
       </div>
       <HeroSection/>

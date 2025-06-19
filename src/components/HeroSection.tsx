@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const HeroSection = () => {
     return (
-        <div className='relative isolate bg-[url("/hero-bg.png")] bg-cover bg-center bg-no-repeat lg:m-8 m-4 lg:px-12 px-3 py-14 rounded-[20px]'>
+        <div className='relative isolate bg-[url("/hero-bg.png")] bg-cover bg-center bg-no-repeat lg:m-8 m-4 lg:px-12 px-3 lg:py-14 py-8 rounded-[20px]'>
             <div className='absolute -z-10 inset-0 bg-black/50 rounded-[20px]'></div>
             <div className='text-white lg:pt-96 pt-48 lg:w-1/2 '>
                 <h1 className='lg:text-[64px] text-3xl lg:leading-16 font-bold'>
