@@ -1,0 +1,42 @@
+[
+  {
+    "id": "al-qassim-cement",
+    "image": "/products/product-1.png",
+    "title": "Al Qassim Cement",
+    "price": "15,000 SAR",
+    "location": "Jeddah, SA",
+    "timeLeft": "2 days : 130h : 45m : 23s",
+    "participants": [
+      "/participants/user-1.jpg",
+      "/participants/user-2.jpg",
+      "/participants/user-3.jpg"
+    ],
+    "participantsExtra": 2,
+    "progress": 75,
+    "supplierImg": "/supplier-img.png",
+    "supplierName": "Hammad Sons Developers",
+    "minOrder": "4 Units",
+    "deliveryTimeframe": "Feb 06, 2025 -  Feb 10, 2025",
+    "delivery": "Included"
+  },
+  {
+    "id": "riyadh-steel-bars",
+    "image": "/products/product-2.png",
+    "title": "Riyadh Steel Bars",
+    "price": "22,000 SAR",
+    "location": "Riyadh, SA",
+    "timeLeft": "1 day : 80h : 30m : 10s",
+    "participants": [
+      "/participants/user-2.jpg",
+      "/participants/user-3.jpg",
+      "/participants/user-1.jpg"
+    ],
+    "participantsExtra": 3,
+    "progress": 60,
+    "supplierImg": "/supplier-img.png",
+    "supplierName": "Steel Masters",
+    "minOrder": "10 Units",
+    "deliveryTimeframe": "Mar 01, 2025 -  Mar 05, 2025",
+    "delivery": "Included"
+  }
+]
