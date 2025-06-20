@@ -6,14 +6,14 @@ const AboutUs = () => {
         <div className='bg-[#F0F0F0] lg:px-20 px-5 lg:my-20 my-8 py-14'>
             <div className="flex items-center flex-wrap gap-y-5">
                 <div className='md:w-1/2 w-full lg:pr-20'>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center lg:justify-start justify-center gap-2">
                         <div className="w-12 h-0.5 bg-[#F15625]"></div>
-                        <span className='uppercase text-[#F15625] font-[Outfit-SemiBold]'>About us</span>
+                        <span className='lg:text-base text-xs uppercase text-[#F15625] font-[Outfit-SemiBold]'>About us</span>
                     </div>
-                    <h2 className='text-5xl font-[Outfit-Bold] my-5'>Helping retailers save together.</h2>
-                    <p className='text-[#00000099] text-xl my-8'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendisse adipiscing diam quis. Et id volutpat sit odio venenatis a dui. Pharetra, quam non, amet pretium tincidunt sem tincidunt fringilla. Convallis ac viverra egestas in bibendum metus, elit. Sagittis lacinia sit.</p>
-                    <div className="mt-10">
-                        <Link href='/deals' className="bg-[#F15625] text-white px-6 py-4 rounded-sm inline-block menu-btn leading-[1.2] text-xl font-['Outfit-SemiBold'] border border-[#F15625]">About our company</Link>
+                    <h2 className='lg:text-5xl text-3xl lg:text-left text-center font-[Outfit-Bold] my-5'>Helping retailers save together.</h2>
+                    <p className='text-[#00000099] text-xl my-8 lg:text-start text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendisse adipiscing diam quis. Et id volutpat sit odio venenatis a dui. Pharetra, quam non, amet pretium tincidunt sem tincidunt fringilla. Convallis ac viverra egestas in bibendum metus, elit. Sagittis lacinia sit.</p>
+                    <div className="mt-10 hidden lg:inline-block">
+                        <Link href='#' className="bg-[#F15625] text-white px-6 py-4 rounded-sm inline-block menu-btn leading-[1.2] text-xl font-['Outfit-SemiBold'] border border-[#F15625]">About our company</Link>
                     </div>
                 </div>
                 <div className="md:w-1/2 w-full place-items-end">
@@ -35,6 +35,9 @@ const AboutUs = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="mt-10 lg:hidden text-center block">
+                <Link href='#' className="bg-[#F15625] text-white px-4 py-2.5 rounded-sm inline-block menu-btn leading-[1.2] text-xs font-['Outfit-SemiBold'] border border-[#F15625]">About our company</Link>
             </div>
         </div>
     )

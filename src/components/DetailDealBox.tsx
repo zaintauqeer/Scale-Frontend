@@ -53,13 +53,13 @@ const DetailDealBox = ({
   }, [emblaApi]);
 
   return (
-    <div className="bg-white lg:px-20 px-5 py-14 flex flex-col lg:flex-row gap-x-10">
+    <div className="lg:px-20 px-5 py-14 flex flex-col lg:flex-row gap-x-12">
       {/* Images Section */}
-      <div className="flex flex-col gap-5 w-full lg:w-1/3">
+      <div className="flex flex-col gap-5 w-full lg:w-5/12">
         {/* Main Image */}
         <div className="bg-[#CCCCCC] rounded-sm overflow-hidden">
           <div className="overflow-hidden" ref={emblaRef}>
-            <div className="embla__container min-h-[520px]">
+            <div className="embla__container aspect-square">
               {dealImages.map((img: string, index: React.Key) => (
                 <div key={index} className="embla__slide ">
                   <div className="h-full flex items-center justify-center">
@@ -107,7 +107,7 @@ const DetailDealBox = ({
         </div>
       </div>
       {/* Information Section */}
-      <div className="flex-1  gap-5">
+      <div className="gap-5 w-7/12">
         <div className='flex gap-6 flex-wrap justify-between pb-5 border-b border-[#DDDDDD]'>
           <h2 className="lg:text-[32px] font-bold mb-2">{title}</h2>
           <span className="lg:text-[32px] text-lg font-semibold text-[#F25550]">{price}</span>

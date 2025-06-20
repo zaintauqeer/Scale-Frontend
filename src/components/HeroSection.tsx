@@ -11,8 +11,8 @@ const HeroSection = () => {
                 </h1>
                 <p className='lg:text-2xl lg:pr-32 mt-8'>Join construction material group deals through WhatsApp in just a few taps.</p>
                 <div className='lg:mt-12 mt-8'>
-                <Link href='/deals' className="bg-[#F15625] text-white lg:px-11 px-8 lg:py-5 py-2.5 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border border-[#F15625]">View live deals</Link>
-                <Link href='/deals' className=" text-white lg:px-11 px-4 lg:py-5 py-2.5 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border border-white ml-5">Order via whatsapp</Link>
+                    <Link href='/deals' className="bg-[#F15625] text-white lg:px-11 px-8 lg:py-5 py-2.5 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border border-[#F15625]">View live deals</Link>
+                    <Link href='/deals' className=" text-white lg:px-11 px-4 lg:py-5 py-2.5 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border border-white ml-5">Order via whatsapp</Link>
                 </div>
             </div>
         </div>

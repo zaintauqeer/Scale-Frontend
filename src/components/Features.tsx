@@ -10,11 +10,9 @@ const Features = () => {
                 </div>
                 <h2 className='lg:text-5xl text-3xl font-[Outfit-Bold] my-5'>Our Key Features</h2>
                 <p className='text-[#00000099] text-xl max-w-2xl m-auto'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendisse adipiscing diam quis. </p>
-                <div className="mt-14 py-16 relative px-24 isolate" style={{
-                    background: 'linear-gradient(90deg, #fff 0%, #fff 10.33%, #1A3D38 10.33%, #1A3D38 90.67%, #fff 90.67%, #fff 100%)'
-                }}>
-                    <img src="/s-mark-green.svg" className='hidden lg:block absolute left-0 top-0 h-full -z-10' alt="" />
-                    <img src="/s-mark-green.svg" className='hidden lg:block absolute right-0 top-0 h-full -z-10' alt="" />
+                <div className="lg:mt-14 mt-64 lg:py-16 relative px-24 isolate lg:bg-[linear-gradient(90deg,#fff_0%,#fff_10.33%,#1A3D38_10.33%,#1A3D38_90.67%,#fff_90.67%,#fff_100%)] bg-[#1A3D38]">
+                    <img src="/s-mark-green.svg" className='block absolute left-0 top-0 lg:translate-y-0 -translate-y-1/2 lg:h-full max-w-full -z-10' alt="" />
+                    <img src="/s-mark-green.svg" className='block absolute right-0 top-0 lg:h-full max-w-full -z-10' alt="" />
                     <div className="flex flex-wrap">
                         <div className="md:w-1/3 w-full">
                             <div className="text-center place-items-center text-white lg:px-15">

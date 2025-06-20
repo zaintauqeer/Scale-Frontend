@@ -4,6 +4,7 @@ import deals from '@/components/deals.json';
 import DetailDealBox from '@/components/DetailDealBox';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import DealTabs from '@/components/DealTabs';
 type Props = {
   params: {
     id: string
@@ -26,6 +27,7 @@ export default function DealDetails({ params }: Props) {
         <Navbar />
       </div>
       <DetailDealBox {...deal} />
+      <DealTabs />
       <Footer />
     </>
   );
