@@ -1,5 +1,5 @@
 'use client'
-
+import React from 'react';
 import deals from '@/components/deals.json';
 import DetailDealBox from '@/components/DetailDealBox';
 import Navbar from '@/components/Navbar';
@@ -7,13 +7,12 @@ import Footer from '@/components/Footer';
 import DealTabs from '@/components/DealTabs';
 import { useTranslations } from 'next-intl';
 type Props = {
-  params: {
-    id: string;
-    locale: string;
-  }
+  params: Promise<{ id: string}>;
+  // locale: string;
 }
 export default function DealDetails({ params }: Props) {
-  const deal = deals.find((d: { id: string }) => d.id === params.id);
+  const {id} = React.use(params)
+  const deal = deals.find((d: { id: string }) => d.id === id);
   const t = useTranslations('deals');
   if (!deal) {
     return (
