@@ -62,3 +62,8 @@ body {
   flex: 0 0 100%;
   min-width: 0;
 }
+/* src/globals.css */
+[dir="rtl"] {
+  /* Add RTL-specific styles if needed */
+  text-align: right;
+}

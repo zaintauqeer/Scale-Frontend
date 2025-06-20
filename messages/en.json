@@ -1,0 +1,13 @@
+{
+  "navbar": {
+    "home": "Home",
+    "deals": "Deals"
+  },
+  "hero": {
+    "title": "Get Bulk Prices. <br /> Without Bulk Orders.",
+    "description": "Join construction material group deals through WhatsApp in just a few taps."
+  },
+  "deals": {
+    "notFound": "Deal not found"
+  }
+}

@@ -2,15 +2,13 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import LanguageSwitcher from './LanguageSwitcher';
+// import { useTranslations } from 'next-intl';
 
 export default function Navbar() {
   const pathname = usePathname();
-  const [selectedLang, setSelectedLang] = useState('en');
-
-  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedLang(e.target.value);
-  };
+  // const t = useTranslations('navbar');
+  
 
   return (
     <nav className='lg:px-20 px-8'> 
@@ -43,22 +41,8 @@ export default function Navbar() {
           {/* Language Dropdown */}
           <div className="hidden md:block">
             <div className="relative">
-              <select 
-                className="bg-transparent rounded-md px-2 py-1 pl-8 border-0 text-white"
-                value={selectedLang}
-                onChange={handleLanguageChange}
-              >
-                <option value="en" className='text-black'>EN</option>
-                <option value="es" className='text-black'>ES</option>
-                <option value="fr" className='text-black'>FR</option>
-              </select>
-              <div className="absolute left-2 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                <img 
-                  src={`/flags/${selectedLang}.png`} 
-                  alt={`${selectedLang} flag`} 
-                  className="w-4 h-4 object-cover" 
-                />
-              </div>
+              <LanguageSwitcher />
+              
             </div>
           </div>
 
