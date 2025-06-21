@@ -22,21 +22,21 @@ const HowItWorks = () => {
                     <div className="w-1/2">
                         <div className="mb-8 text-center  w-max flex items-center">
                             <div className='place-items-center lg:w-[135px] w-24'>
-                                <img className='lg:w-[100] w-20 aspect-square' src="/icons/illus.svg" alt="" />
+                                <img className='lg:w-[100] w-20 m-auto aspect-square' src="/icons/illus-1.svg" alt="" />
                                 <h6 className='font-[Outfit-Bold] lg:text-base text-xs max-w-32'>Browse Ongoing Group Deals</h6>
                             </div>
                             <img src="/icons/arrow.svg" className='lg:rotate-12 rotate-45 origin-left lg:w-28 w-20' alt="" />
                         </div>
                         <div className="mb-8 text-center  w-max flex items-center">
                             <div className='place-items-center lg:w-[135px] w-24'>
-                                <img  className='lg:w-[100] w-20 aspect-square' src="/icons/illus-2.svg" alt="" />
+                                <img  className='lg:w-[100] w-20 m-auto aspect-square' src="/icons/illus-2.svg" alt="" />
                                 <h6 className='font-[Outfit-Bold] lg:text-base text-xs max-w-32'>Join the Deal via WhatsApp</h6>
                             </div>
                             <img  className='lg:w-28 w-16' src="/icons/arrow.svg" alt="" />
                         </div>
                         <div className="mb-8 text-center  w-max flex items-center">
                             <div className='place-items-center lg:w-[135px] w-24'>
-                                <img  className='lg:w-[100] w-20 aspect-square' src="/icons/illus-3.svg" alt="" />
+                                <img  className='lg:w-[100] w-20 m-auto aspect-square' src="/icons/illus-3.svg" alt="" />
                                 <h6 className='font-[Outfit-Bold] lg:text-base text-xs max-w-32'>Get Delivery When the Deal Closes</h6>
                             </div>
                             <img src="/icons/arrow.svg" className='lg:-rotate-12 -rotate-45 origin-left lg:w-28 w-20' alt="" />
