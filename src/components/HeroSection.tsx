@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import parse from 'html-react-parser';
 const HeroSection = () => {
     const t = useTranslations('hero');
+    const g = useTranslations('global')
     return (
         <div className='relative isolate bg-[url("/hero-bg.png")] bg-cover bg-center bg-no-repeat lg:m-8 m-4 lg:px-12 px-3 lg:py-14 py-8 rounded-[20px]'>
             <div className='absolute -z-10 inset-0 bg-black/50 rounded-[20px]'></div>
@@ -11,10 +12,10 @@ const HeroSection = () => {
                 <h1 className='lg:text-[64px] text-3xl lg:leading-16 font-bold'>
                     {parse(t('title'))}
                 </h1>
-                <p className='lg:text-2xl lg:pr-32 mt-8'>{t('description')}</p>
+                <p className='lg:text-2xl lg:pe-32 mt-8'>{t('description')}</p>
                 <div className='lg:mt-12 text-center mt-8 flex lg:gap-5 gap-3 flex-wrap'>
-                    <Link href='/deals' className="bg-[#F15625] text-white lg:px-11 px-7 lg:py-5 py-2.5 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border border-[#F15625] lg:grow-0 grow">View live deals</Link>
-                    <Link href='/deals' className=" text-white lg:px-11 px-4 lg:py-5 py-2.5 rounded-sm inline-block menu-btn lg:grow-0 grow leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border border-white">Order via whatsapp</Link>
+                    <Link href='/deals' className="bg-[#F15625] text-white lg:px-11 px-7 lg:py-5 py-2.5 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border border-[#F15625] lg:grow-0 grow">{g('viewLiveDeals')}</Link>
+                    <Link href='/deals' className=" text-white lg:px-11 px-4 lg:py-5 py-2.5 rounded-sm inline-block menu-btn lg:grow-0 grow leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border border-white">{g('orderViaWhatsapp')}</Link>
                 </div>
             </div>
         </div>

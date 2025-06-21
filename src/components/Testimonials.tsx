@@ -27,13 +27,13 @@ const Testimonials = () => {
                         className="py-3.5 px-9 border rounded-sm border-[#F15625] hover:bg-gray-100 cursor-pointer"
                         onClick={scrollPrev}
                     >
-                        <img src="icons/button-arrow.svg" alt="" />
+                        <img className='rtl:rotate-180' src="icons/button-arrow.svg" alt="" />
                     </button>
                     <button
-                        className="py-3.5 px-9 ml-5 border rounded-sm border-[#F15625] hover:bg-gray-100 cursor-pointer"
+                        className="py-3.5 px-9 ms-5 border rounded-sm border-[#F15625] hover:bg-gray-100 cursor-pointer"
                         onClick={scrollNext}
                     >
-                        <img src="icons/button-arrow.svg" className='rotate-180' alt="" />
+                        <img src="icons/button-arrow.svg" className='ltr:rotate-180' alt="" />
                     </button>
                 </div>
             </div>
@@ -57,7 +57,7 @@ const Testimonials = () => {
                     </div>
                 </div>
                 <div className="lg:w-3/4 w-full ml-auto">
-                    <div className="embla" ref={emblaRef}>
+                    <div dir='ltr' className="embla" ref={emblaRef}>
                         <div className="embla__container">
                             <div className="embla__slide p-5">
                                 <div className="text-center rounded-2xl bg-white px-12 py-16 relative isolate" style={{ boxShadow: '0px 0px 20px 0px #0000001F' }}>

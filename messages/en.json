@@ -1,6 +1,7 @@
 {
   "global": {
-    "viewLiveDeals": "View Live Deals"
+    "viewLiveDeals": "View Live Deals",
+    "orderViaWhatsapp": "Order via WhatsApp"
   },
   "navbar": {
     "deals": "Deals",

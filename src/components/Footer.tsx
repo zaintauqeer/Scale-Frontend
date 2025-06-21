@@ -8,7 +8,7 @@ const Footer = () => {
             <img src="/Logo-White.png" alt="" />
             <div className='mt-10'>
                 <Link href='/deals' className="bg-[#F15625] text-white px-6 py-4 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border border-[#F15625]">View live deals</Link>
-                <Link href='/deals' className=" text-white px-6 py-4 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border border-white ml-5">Order via whatsapp</Link>
+                <Link href='/deals' className=" text-white px-6 py-4 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border border-white ms-5">Order via whatsapp</Link>
             </div>
             <ul className='flex gap-x-3 list-none p-0 m-0 justify-center items-center mt-10'>
                 <li>

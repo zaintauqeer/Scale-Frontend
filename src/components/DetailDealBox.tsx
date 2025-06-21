@@ -150,9 +150,9 @@ const DetailDealBox = ({
           <div className="text-[##222222] text-2xl mb-2">Participants</div>
           <div className="flex items-center gap-2">
             {participants.map((p, i) => (
-              <img key={i} src={p} className="w-[40px] h-[40px] object-cover rounded-full border-2 border-white -ml-2 first:ml-0" alt="participant" />
+              <img key={i} src={p} className="w-[40px] h-[40px] object-cover rounded-full border-2 border-white -ms-2 first:ms-0" alt="participant" />
             ))}
-            <div className="w-[40px] h-[40px] bg-gray-200 rounded-full flex items-center justify-center text-xs font-semibold text-gray-700 border-2 border-white -ml-2">
+            <div className="w-[40px] h-[40px] bg-gray-200 rounded-full flex items-center justify-center text-xs font-semibold text-gray-700 border-2 border-white -ms-2">
               +{participantsExtra}
             </div>
           </div>

@@ -72,7 +72,7 @@ const DealTabs = () => {
               Market Price Comparison
             </h4>
             <div className="flex gap-x-5">
-              <ul className="text-[#666666] mt-5 text-xl list-disc pl-4 flex flex-col gap-y-5">
+              <ul className="text-[#666666] mt-5 text-xl list-disc ps-4 flex flex-col gap-y-5">
                 <li>
                   Lorem ipsum dolor sit amet consectetur. Ultricies porttitor amet quis faucibus in sapien phasellus tincidunt. Urna nunc vitae donec purus est arcu posuere sed. Ut turpis nam consectetur laoreet quis mauris tempus. Lorem ipsum dolor sit amet consectetur. Ultricies porttitor amet quis faucibus in sapien phasellus tincidunt. 
                 </li>
@@ -92,7 +92,7 @@ const DealTabs = () => {
             <h4 className="font-[Outfit-Medium] text-[#222222] text-2xl">
               Terms & Important Notes
             </h4>
-            <ul className="text-[#666666] mt-5 text-xl list-disc pl-4 flex flex-col gap-y-5">
+            <ul className="text-[#666666] mt-5 text-xl list-disc ps-4 flex flex-col gap-y-5">
               <li>
                 <span className="font-[Outfit-Medium]">
                   Group-Based Pricing:

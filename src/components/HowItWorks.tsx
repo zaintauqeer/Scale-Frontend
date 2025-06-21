@@ -13,7 +13,7 @@ const HowItWorks = () => {
             <p className='text-[#00000099] text-xl lg:max-w-2xl m-auto'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod.</p>
             <div className='mt-10'>
                 <Link href='/deals' className="bg-[#F15625] text-white lg:px-11 px-8 lg:py-5 py-2.5 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border border-[#F15625]">View live deals</Link>
-                    <Link href='/deals' className=" text-black lg:px-11 px-4 lg:py-5 py-2.5 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border border-black ml-5">Order via whatsapp</Link>
+                    <Link href='/deals' className=" text-black lg:px-11 px-4 lg:py-5 py-2.5 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border border-black ms-5">Order via whatsapp</Link>
             </div>
         </div>
         <div className="flex flex-wrap mt-10 items-center">

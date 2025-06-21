@@ -5,7 +5,7 @@ const AboutUs = () => {
     return (
         <div className='bg-[#F0F0F0] lg:px-20 px-5 lg:my-20 my-8 py-14'>
             <div className="flex items-center flex-wrap gap-y-5">
-                <div className='md:w-1/2 w-full lg:pr-20'>
+                <div className='md:w-1/2 w-full lg:pe-20'>
                     <div className="flex items-center lg:justify-start justify-center gap-2">
                         <div className="w-12 h-0.5 bg-[#F15625]"></div>
                         <span className='lg:text-base text-xs uppercase text-[#F15625] font-[Outfit-SemiBold]'>About us</span>

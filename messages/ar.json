@@ -1,6 +1,7 @@
 {
   "global": {
-    "viewLiveDeals": "رض الصفقات المباشرة"
+    "viewLiveDeals": "رض الصفقات المباشرة",
+    "orderViaWhatsapp": "اطلب عبر واتساب"
   },
   "navbar": {
     "deals": "الصفقات",
