@@ -9,6 +9,9 @@ export default function Navbar() {
   const pathname = usePathname();
   // const t = useTranslations('navbar');
   
+  // Extract the path without locale prefix
+  const pathWithoutLocale = pathname?.split('/').slice(2).join('/');
+  const basePath = '/' + pathWithoutLocale;
 
   return (
     <nav className='lg:px-20 px-8'> 
@@ -21,17 +24,17 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Menu - hidden on mobile */}
-        <div className={`hidden md:flex items-center space-x-6 text-xl ${pathname === '/' ? 'text-white' : ''}`}>
-          <Link href="/deals" className={`${pathname === '/deals' ? 'text-[#f25550]' : ''} `}>
+        <div className={`hidden md:flex items-center space-x-6 text-xl ${basePath === '/' ? 'text-white' : ''}`}>
+          <Link href="/deals" className={`${basePath === '/deals' ? 'text-[#f25550]' : ''} `}>
             Deals
           </Link>
-          <Link href="/how-it-works" className={`${pathname === '/how-it-works' ? 'text-[#f25550]' : ''}`}>
+          <Link href="/how-it-works" className={`${basePath === '/how-it-works' ? 'text-[#f25550]' : ''}`}>
             How it works
           </Link>
-          <Link href="/about" className={`${pathname === '/about' ? 'text-[#f25550]' : ''}`}>
+          <Link href="/about" className={`${basePath === '/about' ? 'text-[#f25550]' : ''}`}>
             About
           </Link>
-          <Link href="/contact-us" className={`${pathname === '/contact-us' ? 'text-[#f25550]' : ''}`}>
+          <Link href="/contact-us" className={`${basePath === '/contact-us' ? 'text-[#f25550]' : ''}`}>
             Contact us
           </Link>
         </div>
