@@ -45,7 +45,6 @@ export default function Navbar() {
           <div className="hidden md:block">
             <div className="relative">
               <LanguageSwitcher />
-              
             </div>
           </div>
 

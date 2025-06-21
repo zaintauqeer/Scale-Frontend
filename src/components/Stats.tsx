@@ -16,8 +16,8 @@ const StatBox: React.FC<StatBoxProps> = ({ icon, end, suffix = '', text }) => {
 
   return (
     <div ref={ref} className="xl:w-1/3 w-full lg:px-24 px-10 py-12">
-      <div className="text-center place-items-center">
-        <img src={icon} alt="Stat Icon" />
+      <div className="text-center">
+        <img src={icon} alt="Stat Icon" className='inline' />
         <h2 className="text-[#1C3C36] lg:text-[56px] text-[40px] my-5 font-['Outfit-Bold'] leading-snug">
           {inView ? <CountUp end={end} duration={2} /> : 0}
           {suffix}
