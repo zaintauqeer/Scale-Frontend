@@ -12,9 +12,9 @@ const HeroSection = () => {
                     {parse(t('title'))}
                 </h1>
                 <p className='lg:text-2xl lg:pr-32 mt-8'>{t('description')}</p>
-                <div className='lg:mt-12 mt-8'>
-                    <Link href='/deals' className="bg-[#F15625] text-white lg:px-11 px-8 lg:py-5 py-2.5 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border border-[#F15625]">View live deals</Link>
-                    <Link href='/deals' className=" text-white lg:px-11 px-4 lg:py-5 py-2.5 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border border-white ml-5">Order via whatsapp</Link>
+                <div className='lg:mt-12 text-center mt-8 flex lg:gap-5 gap-3 flex-wrap'>
+                    <Link href='/deals' className="bg-[#F15625] text-white lg:px-11 px-7 lg:py-5 py-2.5 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border border-[#F15625] lg:grow-0 grow">View live deals</Link>
+                    <Link href='/deals' className=" text-white lg:px-11 px-4 lg:py-5 py-2.5 rounded-sm inline-block menu-btn lg:grow-0 grow leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border border-white">Order via whatsapp</Link>
                 </div>
             </div>
         </div>

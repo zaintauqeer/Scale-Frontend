@@ -1,7 +1,12 @@
 {
+  "global": {
+    "viewLiveDeals": "View Live Deals"
+  },
   "navbar": {
-    "home": "Home",
-    "deals": "Deals"
+    "deals": "Deals",
+    "howItWorks": "How it works",
+    "about": "About",
+    "contactUs": "Contact us"
   },
   "hero": {
     "title": "Get Bulk Prices. <br /> Without Bulk Orders.",

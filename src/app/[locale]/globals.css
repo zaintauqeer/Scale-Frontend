@@ -67,3 +67,7 @@ body {
   /* Add RTL-specific styles if needed */
   text-align: right;
 }
+
+@media(max-width: 375px){
+  
+}
