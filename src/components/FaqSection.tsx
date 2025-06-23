@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { useTranslations } from 'next-intl';
+import Link from "next/link";
 
 type FAQItem = {
   question: string;
@@ -42,8 +43,8 @@ const FaqSection: React.FC = () => {
 
   return (
     <div className="lg:px-20 px-5 lg:my-24 my-8">
-      <div className="flex flex-wrap gap-y-4">
-        <div className="lg:ps-10 lg:w-2/6 w-full">
+      <div className="flex flex-wrap gap-y-16">
+        <div className="lg:ps-10 lg:w-2/6 w-full lg:pe-7">
           <div className="flex items-center gap-2">
             <div className="w-12 h-0.5 bg-[#F15625]"></div>
             <span className="uppercase text-[#F15625] font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold">{t('subTitle')}</span>
@@ -54,9 +55,14 @@ const FaqSection: React.FC = () => {
           <p className="text-[#00000099] text-xl max-w-2xl">
             {t('description')}
           </p>
+          <div className="bg-[#F25550] py-5 px-6 mt-10 rounded-xl">
+            <h4 className="flex items-center gap-x-2 text-white lg:text-xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold"><img src="icons/chat-icon.svg" alt="" /> You have different questions?</h4>
+            <p className="lg:text-lg mt-2 text-[#FFFFFF99]">Our team will answer all your questions,we ensure a quick responce</p>
+            <Link href="#" className="lg:py-3 lg:px-11 py-2 px-4 text-[#1A3D38] font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold bg-[#FFFFFF] rounded-sm inline-block mt-5">Contact our team</Link>
+          </div>
         </div>
 
-        <div className="lg:pe-10 lg:w-4/6 w-full">
+        <div className="lg:pe-10 lg:w-4/6 w-full lg:ps-7">
           <div className="">
             <div className="space-y-4">
               {faqs.map((faq, index) => (

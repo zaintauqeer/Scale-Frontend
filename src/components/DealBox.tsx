@@ -91,7 +91,7 @@ const DealBox = ({
             <img src={supplierImg} className="w-6 aspect-square rounded-full border border-[#DDDDDD]" alt="" />
             <h5 className="text-[#222222] ms-3 lg:text-xl font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold">{supplierName}</h5>
           </div>
-          <span className="text-[#666666] lg:text-base text-xs block mb-5 mt-6">{t('Minimum Oder Quantity')}:</span>
+          <span className="text-[#666666] lg:text-base text-xs block mb-5 mt-6">{t('Minimum Order Quantity')}:</span>
           <h5 className="text-[#222222] lg:text-xl font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold">{minOrder}</h5>
         </div>
         <div>
