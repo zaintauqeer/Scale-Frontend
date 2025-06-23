@@ -27,7 +27,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Menu - hidden on mobile */}
-        <div className={`hidden md:flex items-center space-x-6 text-xl ${basePath === '/' ? 'text-white' : ''}`}>
+        <div className={`hidden md:flex items-center space-x-6 text-xl ${basePath === '/' ? 'text-white' : 'text-[#222222]'}`}>
           <Link href="/deals" className={`${basePath === '/deals' ? 'text-[#f25550]' : ''} `}>
             {t('deals')}
           </Link>
@@ -62,7 +62,10 @@ export default function Navbar() {
             onClick={() => setIsMenuOpen(!isMenuOpen)} 
             className="md:hidden bg-white rounded-sm border-0 p-1.5"
           >
-            <img src="icons/menu-icon.svg" alt="" />
+            <img 
+              src={basePath === '/' ? "/icons/menu-icon.svg" : "/icons/menu-icon-black.svg"} 
+              alt="Menu" 
+            />
           </button>
         </div>
       </div>
