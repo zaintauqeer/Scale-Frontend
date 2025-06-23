@@ -15,5 +15,76 @@
   },
   "deals": {
     "notFound": "Deal not found"
+  },
+  "stats":{
+    "MaterialsProcessed":"Materials processed",
+    "GrowthRate":"Growth rate",
+    "ManufacturersOnboarded":"Manufacturers onboarded",
+    "tons":"Tons"
+  },
+  "howItWorks":{
+    "subtitle":"Getting started",
+    "title":"How It Works",
+    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod.",
+    "Browse Ongoing Group Deals":"Browse Ongoing Group Deals",
+    "Join the Deal via WhatsApp":"Join the Deal via WhatsApp",
+    "Get Delivery When the Deal Closes":"Get Delivery When the Deal Closes"
+  },
+  "aboutUs":{
+    "subTitle":"About Us",
+    "title":"Helping retailers save together.",
+    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendisse adipiscing diam quis. Et id volutpat sit odio venenatis a dui. Pharetra, quam non, amet pretium tincidunt sem tincidunt fringilla. Convallis ac viverra egestas in bibendum metus, elit. Sagittis lacinia sit.",
+    "link": "About our company"
+  },
+  "features":{
+    "subTitle":"Features",
+    "title":"Our Key Features",
+    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendisse adipiscing diam quis.",
+    "title1":"Guaranteed Prices Lower Than Market",
+    "description1":"Join other yards and unlock bulk prices normally reserved for big factories. Save 5–15% on essential materials like blocks, cement, and more.",
+    "title2":"Full Ordering Through WhatsApp",
+    "description2":"Join other yards and unlock bulk prices normally reserved for big factories. Save 5–15% on essential materials like blocks, cement, and more.",
+    "title3":"Delivery Included",
+    "description3":"Join other yards and unlock bulk prices normally reserved for big factories. Save 5–15% on essential materials like blocks, cement, and more."
+  },
+  "testimonail":{
+    "subTitle":"Testimonials",
+    "title":"What Do Our Buyers Say?",
+    "testimonialTitle": "“WhatsApp makes the whole process easy.”",
+    "testimonialDescription": "I love getting premium products at unbeatable prices just by joining a group deal. It’s simple, transparent, and the savings are real. I've saved hundreds already. The group-buying model makes so much sense. I got a gadget for 40% less than retail because I joined a deal with others. It's a win-win for everyone!",
+    "testimonialName": "· Qasim Abdullah",
+    "testimonialPosition": "· Construction Material Yard,"
+  },
+  "contactUs":{
+    "subTitle":"Contact Us",
+    "title":"We’re Just a Message Away!",
+    "description":"We’re here to support building material yards  and always open to new suppliers and manufacturers who want to sell in bulk.",
+    "Chat with us on WhatsApp":"Chat with us on WhatsApp"
+  },
+  "smallBanner":{
+    "title":"Don’t Miss the Next Deal",
+    "description":"Group orders are closing fast, join now and start saving on your next delivery."
+  },
+  "contactForm":{
+    "title":"Send Us a Message",
+    "placeholder1":"Enter name",
+    "placeholder2":"Enter phone number",
+    "placeholder3":"Enter your message...",
+    "sendMessage":"Send Message"
+  },
+  "faq":{
+    "subTitle":"Faq",
+    "title":"Frequently Asked Question",
+    "description":"Loved by millions, enjoyed in over 100 countries worldwide!",
+    "q1": "Who is Scale for?",
+    "q2": "How does group buying help yards?",
+    "q3": "When will my order be delivered?",
+    "q4": "What happens if the group deal doesn’t reach the target?",
+    "q5": "How do I place an order?",
+    "a1": "Scale is built for construction material yards that want to save on purchasing. It’s also for suppliers and manufacturers who want to sell larger volumes more easily."
+  },
+  "footer":{
+    "copyright":"© 2025 SCALE Inc. All rights reserved."
   }
+
 }

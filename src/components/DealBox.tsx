@@ -39,21 +39,21 @@ const DealBox = ({
         />
       </div>
       <div className="mt-9 flex justify-between items-center flex-wrap pb-5 mb-5 border-b border-[#CCCCCC]">
-        <h3 className="lg:text-2xl text-xl font-[Outfit-Bold]">{title}</h3>
-        <p className="lg:text-[28px] text-xl font-[Outfit-Bold] text-[#F25550]">
+        <h3 className="lg:text-2xl text-xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold">{title}</h3>
+        <p className="lg:text-[28px] text-xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold text-[#F25550]">
           {price}
         </p>
       </div>
       <div className="flex justify-between items-center mb-10">
-        <h3 className="lg:text-xl font-[Outfit-Bold] text-[#444444] flex items-center">
+        <h3 className="lg:text-xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold text-[#444444] flex items-center">
           <img src="/icons/location.svg" alt="" /> {location}
         </h3>
-        <p className="lg:text-xl font-[Outfit-Bold] text-[#F25550]">
+        <p className="lg:text-xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold text-[#F25550]">
           {timeLeft}
         </p>
       </div>
       <div className="mt-9 flex justify-between items-center mb-6">
-        <h3 className="text-xl font-[Outfit-Bold]">Participants</h3>
+        <h3 className="text-xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold">Participants</h3>
         <div className="flex items-center">
           <img
             src={participants[0]}
@@ -70,7 +70,7 @@ const DealBox = ({
             className="w-[40px] h-[40px] object-cover translate-x-1/2 border-2 border-[#FFFFFF] rounded-full"
             alt=""
           />
-          <div className="w-[40px] h-[40px] bg-white rounded-full z-10 flex justify-center items-center text-[#222222] text-sm font-[Outfit-Bold]">
+          <div className="w-[40px] h-[40px] bg-white rounded-full z-10 flex justify-center items-center text-[#222222] text-sm font-[Outfit-Bold] rtl:font-sans rtl:font-bold">
             +{participantsExtra}
           </div>
         </div>
@@ -79,7 +79,7 @@ const DealBox = ({
         <div className="w-full lg:h-3.5 h-2 bg-gray-200 rounded-full">
           <div className="h-full bg-[#F25550] rounded-full" style={{width: `${progress}%`}}></div>
         </div>
-        <span className="lg:text-2xl font-[Outfit-SemiBold] text-[#444444]">
+        <span className="lg:text-2xl font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold text-[#444444]">
           {progress}%
         </span>
       </div>
@@ -88,21 +88,23 @@ const DealBox = ({
           <span className="text-[#666666] lg:text-base text-xs block mb-5">Supplier:</span>
           <div className="flex items-center ">
             <img src={supplierImg} className="w-6 aspect-square rounded-full border border-[#DDDDDD]" alt="" />
-            <h5 className="text-[#222222] ms-3 lg:text-xl font-[Outfit-SemiBold]">{supplierName}</h5>
+            <h5 className="text-[#222222] ms-3 lg:text-xl font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold">{supplierName}</h5>
           </div>
           <span className="text-[#666666] lg:text-base text-xs block mb-5 mt-6">Minimum Oder Quantity:</span>
-          <h5 className="text-[#222222] lg:text-xl font-[Outfit-SemiBold]">{minOrder}</h5>
+          <h5 className="text-[#222222] lg:text-xl font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold">{minOrder}</h5>
         </div>
         <div>
           <span className="text-[#666666] lg:text-base text-xs block mb-5">Delivery Timeframe:</span>
-          <h5 className="text-[#222222] lg:text-xl font-[Outfit-SemiBold]">{deliveryTimeframe}</h5>
+          <h5 className="text-[#222222] lg:text-xl font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold">{deliveryTimeframe}</h5>
           <span className="text-[#666666] lg:text-base text-xs block mb-5 mt-6">Delivery:</span>
-          <h5 className="text-[#222222] lg:text-xl font-[Outfit-SemiBold]">{delivery}</h5>
+          <h5 className="text-[#222222] lg:text-xl font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold">{delivery}</h5>
         </div>
       </div>
       <div className='mt-10 flex gap-6'>
-            <button  className="bg-[#F25550] text-center flex-auto  text-white px-6 py-4 rounded-sm inline-block menu-btn leading-[1.2] font-['Outfit-SemiBold'] border border-[#F15625]">Join now</button>
-            <button  className="w-max whitespace-nowrap text-[#222222] px-6 py-[14px] rounded-sm menu-btn leading-[1.2] font-['Outfit-SemiBold'] border border-[#DDDDDD] flex gap-x-2 items-center">
+            <button  className="bg-[#F25550] text-center flex-auto  text-white px-6 py-4 rounded-sm inline-block menu-btn leading-[1.2] font-['Outfit-SemiBold'] 
+ rtl:font-sans rtl:font-semibold border rtl:font-sans rtl:font-semibold border-[#F15625]">Join now</button>
+            <button  className="w-max whitespace-nowrap text-[#222222] px-6 py-[14px] rounded-sm menu-btn leading-[1.2] font-['Outfit-SemiBold'] 
+ rtl:font-sans rtl:font-semibold border rtl:font-sans rtl:font-semibold border-[#DDDDDD] flex gap-x-2 items-center">
               <img src="/icons/share-icon.svg" alt="" />
               Share <span className="hidden lg:inline">for more to join</span>
             </button>

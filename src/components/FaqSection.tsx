@@ -1,34 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
+import { useTranslations } from 'next-intl';
 
 type FAQItem = {
   question: string;
   answer: string;
 };
 
-const faqs: FAQItem[] = [
-  {
-    question: "Who is Scale for?",
-    answer: "Scale is built for construction material yards that want to save on purchasing. It’s also for suppliers and manufacturers who want to sell larger volumes more easily.",
-  },
-  {
-    question: "How does group buying help yards?",
-    answer: "Scale is built for construction material yards that want to save on purchasing. It’s also for suppliers and manufacturers who want to sell larger volumes more easily.",
-  },
-  {
-    question: "When will my order be delivered?",
-    answer: "Scale is built for construction material yards that want to save on purchasing. It’s also for suppliers and manufacturers who want to sell larger volumes more easily.",
-  },
-  {
-    question: "What happens if the group deal doesn’t reach the target?",
-    answer: "Scale is built for construction material yards that want to save on purchasing. It’s also for suppliers and manufacturers who want to sell larger volumes more easily.",
-  },
-  {
-    question: "How do I place an order?",
-    answer: "Scale is built for construction material yards that want to save on purchasing. It’s also for suppliers and manufacturers who want to sell larger volumes more easily.",
-  },
-];
 
 const FaqSection: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -37,23 +16,47 @@ const FaqSection: React.FC = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const t = useTranslations('faq')
+  const faqs: FAQItem[] = [
+    {
+      question: t('q1'),
+      answer: t('a1'),
+    },
+    {
+      question: t('q2'),
+      answer: t('a1'),
+    },
+    {
+      question: t('q3'),
+      answer: t('a1'),
+    },
+    {
+      question: t('q4'),
+      answer: t('a1'),
+    },
+    {
+      question: t('q5'),
+      answer: t('a1'),
+    },
+  ];
+
   return (
     <div className="lg:px-20 px-5 lg:my-24 my-8">
       <div className="flex flex-wrap gap-y-4">
-        <div className="lg:w-2/6 w-full">
+        <div className="lg:ps-10 lg:w-2/6 w-full">
           <div className="flex items-center gap-2">
             <div className="w-12 h-0.5 bg-[#F15625]"></div>
-            <span className="uppercase text-[#F15625] font-[Outfit-SemiBold]">FAQS</span>
+            <span className="uppercase text-[#F15625] font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold">{t('subTitle')}</span>
           </div>
           <div className="flex justify-between items-baseline">
-            <h2 className="text-5xl font-[Outfit-Bold] my-5 max-w-lg">Frequently Asked Question</h2>
+            <h2 className="text-5xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold my-5 max-w-lg">{t('title')}</h2>
           </div>
           <p className="text-[#00000099] text-xl max-w-2xl">
-            Loved by millions, enjoyed in over 100 countries worldwide!
+            {t('description')}
           </p>
         </div>
 
-        <div className="lg:w-4/6 w-full">
+        <div className="lg:pe-10 lg:w-4/6 w-full">
           <div className="">
             <div className="space-y-4">
               {faqs.map((faq, index) => (
@@ -62,11 +65,10 @@ const FaqSection: React.FC = () => {
                     onClick={() => toggle(index)}
                     className="w-full flex justify-between items-center text-left"
                   >
-                    <span className="text-xl font-[Outfit-Medium]">{faq.question}</span>
+                    <span className="text-xl font-[Outfit-Meedium] rtl:font-sans rtl:font-medium">{faq.question}</span>
                     <svg
-                      className={`w-5 h-5 transform transition-transform duration-300 ${
-                        openIndex === index ? "rotate-180" : ""
-                      }`}
+                      className={`w-5 h-5 transform transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""
+                        }`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"

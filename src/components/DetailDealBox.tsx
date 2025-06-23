@@ -112,7 +112,7 @@ const DetailDealBox = ({
           <h2 className="lg:text-[32px] font-bold mb-2">{title}</h2>
           <span className="lg:text-[32px] text-lg font-semibold text-[#F25550]">{price}</span>
         </div>
-        <div className="mt-12 flex flex-col gap-5 font-[Outfit-Medium] text-xl">
+        <div className="mt-12 flex flex-col gap-5 font-[Outfit-Meedium] rtl:font-sans rtl:font-medium text-xl">
           <div className='flex gap-x-3 justify-between'>
             <div className="text-[#666666]">Time Left:</div>
             <div className=" text-[#F25550]">{timeLeft}</div>
@@ -162,7 +162,7 @@ const DetailDealBox = ({
           <div className="w-full h-[14px] bg-gray-200 rounded-full">
             <div className="h-full bg-[#F25550] rounded-full" style={{ width: `${progress}%` }}></div>
           </div>
-          <span className="font-[Outfit-SemiBold] text-lg text-[#444444]">{progress}%</span>
+          <span className="font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold text-lg text-[#444444]">{progress}%</span>
         </div>
         {/* Action Buttons */}
         <div className="flex gap-4 mt-12">

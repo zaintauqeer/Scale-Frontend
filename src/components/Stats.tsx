@@ -3,6 +3,7 @@
 import React from 'react';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
+import {useTranslations} from 'next-intl';
 
 interface StatBoxProps {
   icon: string;
@@ -13,6 +14,7 @@ interface StatBoxProps {
 
 const StatBox: React.FC<StatBoxProps> = ({ icon, end, suffix = '', text }) => {
   const { ref, inView } = useInView({ triggerOnce: true });
+  
 
   return (
     <div ref={ref} className="xl:w-1/3 w-full lg:px-24 px-10 py-12">
@@ -29,12 +31,13 @@ const StatBox: React.FC<StatBoxProps> = ({ icon, end, suffix = '', text }) => {
 };
 
 const Stats = () => {
+  const t = useTranslations('stats');
   return (
     <div className="px-20 lg:my-24 my-9">
       <div className="flex flex-wrap" style={{ boxShadow: '0px 0px 20px 0px #FF522129' }}>
-        <StatBox icon="/icons/hand-shake.svg" end={10} suffix="+" text="Manufacturers onboarded" />
-        <StatBox icon="/icons/construction.svg" end={25} suffix="%" text="Growth rate" />
-        <StatBox icon="/icons/money-hand.svg" end={45} suffix="+ Tons" text="Materials processed" />
+        <StatBox icon="/icons/hand-shake.svg" end={10} suffix="+" text={t('ManufacturersOnboarded')} />
+        <StatBox icon="/icons/construction.svg" end={25} suffix="%" text={t('GrowthRate')} />
+        <StatBox icon="/icons/money-hand.svg" end={45} suffix={`+ ${t('tons')}`} text={t('MaterialsProcessed')} />
       </div>
     </div>
   );

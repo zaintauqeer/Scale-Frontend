@@ -52,15 +52,15 @@ const DealBox: React.FC<DealBoxProps> = ({ title, subText, endTime}) =>{
         <div className='bg-[#D26200] px-6 py-7 w-full'>
             <div className="flex">
                 <div className="w-1/2">
-                    <h2 className='font-[Outfit-Bold] text-white text-3xl'>{title}</h2>
+                    <h2 className='font-[Outfit-Bold] rtl:font-sans rtl:font-bold text-white text-3xl'>{title}</h2>
                     <p className='text-xl text-white'>{subText}</p>
                     <div className="my-6">
                         <p className='text-xl text-[#FFFFFF99]'>Ends in</p>
-                        <p className="text-3xl font-[Outfit-SemiBold] text-white">
+                        <p className="text-3xl font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold text-white">
                             {timeLeft.hours}h : {timeLeft.minutes}m : {timeLeft.seconds}s
                         </p>
                     </div>
-                    <Link href="#" className='w-[200px] inline-block font-[Outfit-SemiBold] p-3 bg-white text-center text-[#F05526] rounded-sm'>View Deal</Link>
+                    <Link href="#" className='w-[200px] inline-block font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold p-3 bg-white text-center text-[#F05526] rounded-sm'>View Deal</Link>
                 </div>
                 <div className="w-1/2">
                     <img src="/cement-image.png" className='w-[250px] ms-auto' alt="" />

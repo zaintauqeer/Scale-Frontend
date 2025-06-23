@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +15,8 @@ const ContactForm = () => {
     phone: '',
     message: ''
   })
+
+  const t = useTranslations('contactForm')
 
   const validateForm = () => {
     let isValid = true
@@ -65,7 +68,7 @@ const ContactForm = () => {
   return (
     <>
       <form className="space-y-4" onSubmit={handleSubmit}>
-        <h2 className='text-2xl font-[Outfit-Bold]'>Send Us a Message</h2>
+        <h2 className='text-2xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold'>{t('title')}</h2>
         <div className='flex lg:flex-nowrap flex-wrap gap-4'>
           <div className='lg:w-1/2 w-full'>
             <input
@@ -73,7 +76,7 @@ const ContactForm = () => {
               id="name"
               name="name"
               value={formData.name}
-              placeholder='Enter name'
+              placeholder={t('placeholder1')}
               onChange={handleChange}
               className={`block w-full rounded-sm p-3 outline-0 bg-[#2222220F]  ${errors.name ? 'border-red-500' : 'border-gray-300'
                 }`}
@@ -82,13 +85,13 @@ const ContactForm = () => {
           </div>
           <div className='lg:w-1/2 w-full'>
             <input
-              type="tel"
+              type="number"
               id="phone"
               name="phone"
-              placeholder='Enter phone number'
+              placeholder={t('placeholder2')}
               value={formData.phone}
               onChange={handleChange}
-              className={`block w-full rounded-sm p-3 outline-0 bg-[#2222220F] ${errors.phone ? 'border-red-500' : 'border-gray-300'
+              className={`[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none block w-full rounded-sm p-3 outline-0 bg-[#2222220F] ${errors.phone ? 'border-red-500' : 'border-gray-300'
                 }`}
             />
             {errors.phone && <p className="mt-1 text-sm text-red-600">{errors.phone}</p>}
@@ -98,7 +101,7 @@ const ContactForm = () => {
           <textarea
             id="message"
             name="message"
-            placeholder='Enter your message...'
+            placeholder={t('placeholder3')}
             rows={4}
             value={formData.message}
             onChange={handleChange}
@@ -112,7 +115,7 @@ const ContactForm = () => {
           type="submit"
           className="bg-[#f15625] text-white  text-xl  py-5 px-6 rounded-sm"
         >
-          Send Message
+          {t('sendMessage')}
         </button>
       </form>
     </>

@@ -14,8 +14,8 @@ const HeroSection = () => {
                 </h1>
                 <p className='lg:text-2xl lg:pe-32 mt-8'>{t('description')}</p>
                 <div className='lg:mt-12 text-center mt-8 flex lg:gap-5 gap-3 flex-wrap'>
-                    <Link href='/deals' className="bg-[#F15625] text-white lg:px-11 px-7 lg:py-5 py-2.5 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border border-[#F15625] lg:grow-0 grow">{g('viewLiveDeals')}</Link>
-                    <Link href='/deals' className=" text-white lg:px-11 px-4 lg:py-5 py-2.5 rounded-sm inline-block menu-btn lg:grow-0 grow leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border border-white">{g('orderViaWhatsapp')}</Link>
+                    <Link href='/deals' className="bg-[#F15625] text-white lg:px-11 px-7 lg:py-5 py-2.5 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border rtl:font-sans rtl:font-semibold border-[#F15625] lg:grow-0 grow">{g('viewLiveDeals')}</Link>
+                    <Link href='/deals' className=" text-white lg:px-11 px-4 lg:py-5 py-2.5 rounded-sm inline-block menu-btn lg:grow-0 grow leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border rtl:font-sans rtl:font-semibold border-white">{g('orderViaWhatsapp')}</Link>
                 </div>
             </div>
         </div>
