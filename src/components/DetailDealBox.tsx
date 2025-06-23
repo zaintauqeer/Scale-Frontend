@@ -168,10 +168,10 @@ const DetailDealBox = ({
         </div>
         {/* Action Buttons */}
         <div className="flex gap-4 mt-12">
-          <button className="bg-[#F25550] flex-auto text-white px-6 py-3 rounded font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold">Join now</button>
+          <button className="bg-[#F25550] flex-auto text-white px-6 py-3 rounded font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold">{t('Join now')}</button>
           <button className="border border-gray-300 px-6 py-3 rounded font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold flex items-center gap-2">
             <img src="/icons/share-icon.svg" alt="Share" className="w-4 h-4" />
-            Share <span className="hidden lg:inline">for more to join</span>
+            {t('Share')} <span className="hidden lg:inline">{t('for more to join')}</span>
           </button>
         </div>
       </div>
