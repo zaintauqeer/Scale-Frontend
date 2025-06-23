@@ -27,17 +27,17 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Menu - hidden on mobile */}
-        <div className={`hidden md:flex items-center space-x-6 text-xl ${basePath === '/' ? 'text-white' : 'text-[#222222]'}`}>
+        <div className={`hidden lg:flex items-center space-x-6 text-xl ${basePath === '/' ? 'text-white' : 'text-[#222222]'}`}>
           <Link href="/deals" className={`${basePath === '/deals' ? 'text-[#f25550]' : ''} `}>
             {t('deals')}
           </Link>
-          <Link href="/how-it-works" className={`${basePath === '/how-it-works' ? 'text-[#f25550]' : ''}`}>
+          <Link href="/#how-it-works" className={`${basePath === '/how-it-works' ? 'text-[#f25550]' : ''}`}>
             {t('howItWorks')}
           </Link>
-          <Link href="/about" className={`${basePath === '/about' ? 'text-[#f25550]' : ''}`}>
+          <Link href="/#about-us" className={`${basePath === '/about-us' ? 'text-[#f25550]' : ''}`}>
             {t('about')}
           </Link>
-          <Link href="/contact-us" className={`${basePath === '/contact-us' ? 'text-[#f25550]' : ''}`}>
+          <Link href="/#contact-us" className={`${basePath === '/contact-us' ? 'text-[#f25550]' : ''}`}>
             {t('contactUs')}
           </Link>
         </div>
@@ -45,7 +45,7 @@ export default function Navbar() {
         {/* Right Section */}
         <div className="flex items-center">
           {/* Language Dropdown */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <div className="relative">
               <LanguageSwitcher />
             </div>
@@ -60,7 +60,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)} 
-            className="md:hidden bg-white rounded-sm border-0 p-1.5"
+            className="lg:hidden bg-white rounded-sm border-0 p-1.5"
           >
             <img 
               src={basePath === '/' ? "/icons/menu-icon.svg" : "/icons/menu-icon-black.svg"} 
@@ -71,7 +71,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`z-50 fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
+      <div className={`z-50 fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} lg:hidden`}>
         <div className="flex flex-col p-4">
           <button 
             onClick={() => setIsMenuOpen(false)}
@@ -84,13 +84,15 @@ export default function Navbar() {
             <Link href="/deals" className={`${basePath === '/deals' ? 'text-[#f25550]' : ''} text-lg`}>
               {t('deals')}
             </Link>
-            <Link href="/how-it-works" className={`${basePath === '/how-it-works' ? 'text-[#f25550]' : ''} text-lg`}>
+            <Link 
+              href="/#how-it-works" className={`${basePath === '/how-it-works' ? 'text-[#f25550]' : ''} text-lg`}
+            >
               {t('howItWorks')}
             </Link>
-            <Link href="/about" className={`${basePath === '/about' ? 'text-[#f25550]' : ''} text-lg`}>
+            <Link href="/#about-us" className={`${basePath === '/about-us' ? 'text-[#f25550]' : ''} text-lg`}>
               {t('about')}
             </Link>
-            <Link href="/contact-us" className={`${basePath === '/contact-us' ? 'text-[#f25550]' : ''} text-lg`}>
+            <Link href="/#contact-us" className={`${basePath === '/contact-us' ? 'text-[#f25550]' : ''} text-lg`}>
               {t('contactUs')}
             </Link>
             <div className="mt-4">

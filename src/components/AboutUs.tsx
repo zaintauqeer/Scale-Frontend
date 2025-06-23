@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl'
 const AboutUs = () => {
     const t = useTranslations('aboutUs')
     return (
-        <div className='bg-[#F0F0F0] lg:px-20 px-5 lg:my-20 my-8 py-14'>
+        <div id='about-us' className='bg-[#F0F0F0] lg:px-20 px-5 lg:my-20 my-8 py-14'>
             <div className="flex items-center flex-wrap gap-y-5">
                 <div className='md:w-1/2 w-full lg:pe-20'>
                     <div className="flex items-center lg:justify-start justify-center gap-2">

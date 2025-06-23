@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 const ContactUs = () => {
     const t = useTranslations('contactUs')
     return (
-        <div className='lg:px-20 px-5 lg:my-24 my-8'>
+        <div id="contact-us" className='lg:px-20 px-5 lg:my-24 my-8'>
             <div className="flex flex-wrap gap-y-4">
                 <div className="lg:w-1/2 w-full">
                     <div className="flex items-center gap-2">

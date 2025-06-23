@@ -6,7 +6,7 @@ const HowItWorks = () => {
     const t = useTranslations('howItWorks')
     const g = useTranslations('global')
     return (
-        <div className='lg:px-20 px-5 lg:my-24 my-8 mt-8'>
+        <div id='how-it-works' className='lg:px-20 px-5 lg:my-24 my-8 mt-8'>
             <div className="text-center">
                 <div className="flex items-center gap-2 justify-center">
                     <div className="w-12 h-0.5 bg-[#F15625]"></div>
@@ -16,10 +16,17 @@ const HowItWorks = () => {
                 <p className='text-[#00000099] text-xl lg:max-w-2xl m-auto'>{t('description')}</p>
                 <div className='mt-10 lg:gap-5 gap-3 flex flex-wrap justify-center'>
                     <Link href='/deals' className="bg-[#F15625] text-white lg:px-11 px-8 lg:py-5 py-2.5 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border rtl:font-sans rtl:font-semibold border-[#F15625] lg:grow-0 grow text-center">{g('viewLiveDeals')}</Link>
-                    <Link href='/deals' className=" text-black lg:px-11 px-4 lg:py-5 py-2.5 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border rtl:font-sans rtl:font-semibold border-black lg:grow-0 grow text-center">{g('orderViaWhatsapp')}</Link>
+                    <Link
+                        href="https://wa.me/966551324666"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className=" text-black lg:px-11 px-4 lg:py-5 py-2.5 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border rtl:font-sans rtl:font-semibold border-black lg:grow-0 grow text-center"
+                    >
+                        {g('orderViaWhatsapp')}
+                    </Link>
                 </div>
             </div>
-            <div  className="flex flex-wrap mt-10 items-center">
+            <div className="flex flex-wrap mt-10 items-center">
                 <div dir='ltr' className="lg:w-1/2 w-full lg:pe-10">
                     <div className="flex items-center">
                         <div className="w-1/2">
