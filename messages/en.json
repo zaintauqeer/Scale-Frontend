@@ -85,6 +85,10 @@
   },
   "footer":{
     "copyright":"© 2025 SCALE Inc. All rights reserved."
+  },
+  "dealOfTheMonth":{
+    "endsIn": "Ends in:",
+    "viewDeals": "View Deals"
   }
 
 }
