@@ -20,7 +20,7 @@ const HowItWorks = () => {
                 </div>
             </div>
             <div  className="flex flex-wrap mt-10 items-center">
-                <div dir='ltr' className="lg:w-1/2 w-full">
+                <div dir='ltr' className="lg:w-1/2 w-full lg:pe-10">
                     <div className="flex items-center">
                         <div className="w-1/2">
                             <div className="mb-8 text-center  w-max flex items-center">
@@ -50,9 +50,9 @@ const HowItWorks = () => {
                         </div>
                     </div>
                 </div>
-                <div className="lg:w-1/2 w-full place-items-center">
-                    <img className='rtl:hidden' src="/products.png" alt="" />
-                    <img className='ltr:hidden' src="/products-ar.png" alt="" />
+                <div className="lg:w-1/2 w-full place-items-center lg:ps-10 border-s border-[#0000001F]">
+                    <img className='rtl:hidden max-w-full' src="/products.png" alt="" />
+                    <img className='ltr:hidden max-w-full' src="/products-ar.png" alt="" />
                 </div>
             </div>
         </div>

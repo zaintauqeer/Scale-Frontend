@@ -92,7 +92,14 @@
   },
   "liveDeals":{
       "subTitle":"صفقات حية",
-      "title":"اكتشف أحدث عروضنا"
+      "title":"اكتشف أحدث عروضنا",
+      "About to meet MOQ": "على وشك اللقاء MOQ",
+      "About to end": "على وشك الانتهاء",
+      "Aggregate and Sand": "الركام والرمل",
+      "Block": "حاجز",
+      "Cement": "أسمنت",
+      "Wood":"خشب"
+
   },
   "dealBox":{
     "Time Left": "الوقت المتبقي",
@@ -101,10 +108,15 @@
     "Minimum Order Quantity":"الحد الأدنى لكمية الطلب",
     "Delivery Timeframe": "الإطار الزمني للتسليم",
     "Delivery":"توصيل",
+    "Participants":"مشاركون",
     "Join now":"انضم الآن",
     "Share":"شارك",
     "for more to join":"لمزيد من الانضمام"
-
+  },
+  "dealTabs":{
+    "Description":"وصف",
+    "Terms & Notes":"الشروط والملاحظات",
+    "Payment Instruction":"تعليمات الدفع"
   }
 
 }

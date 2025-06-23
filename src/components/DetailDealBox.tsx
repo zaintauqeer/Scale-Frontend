@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
+import { useTranslations } from 'next-intl';
 
 interface DetailDealBoxProps {
   id: string;
@@ -52,6 +53,7 @@ const DetailDealBox = ({
     };
   }, [emblaApi]);
 
+  const t = useTranslations('dealBox');
   return (
     <div className="lg:px-20 px-5 py-14 flex flex-col lg:flex-row gap-x-12">
       {/* Images Section */}
@@ -114,40 +116,40 @@ const DetailDealBox = ({
         </div>
         <div className="mt-12 flex flex-col gap-5 font-[Outfit-Medium] rtl:font-sans rtl:font-medium text-xl">
           <div className='flex gap-x-3 justify-between'>
-            <div className="text-[#666666]">Time Left:</div>
+            <div className="text-[#666666]">{t('Time Left')}:</div>
             <div className=" text-[#F25550]">{timeLeft}</div>
           </div>
           <div className='flex gap-x-3 justify-between'>
-            <div className="text-[#666666]">Supplier:</div>
+            <div className="text-[#666666]">{t('Supplier')}:</div>
             <div className="flex items-center gap-2">
               <img src={supplierImg} alt={supplierName} className="w-[40px] h-[40px] rounded-full border" />
               <span className="">{supplierName}</span>
             </div>
           </div>
           <div className='flex gap-x-3 justify-between'>
-            <div className="text-[#666666]">Supplier:</div>
+            <div className="text-[#666666]">{t('Supplier')}:</div>
             <div className=" text-[#222222]">{location}</div>
           </div>
           <div className='flex gap-x-3 justify-between'>
-            <div className="text-[#666666]">Delivery Area:</div>
+            <div className="text-[#666666]">{t('Delivery Area')}:</div>
             <div className=" text-[#222222]">{location}</div>
           </div>
           <div className='flex gap-x-3 justify-between'>
-            <div className="text-[#666666]">Minimum Order Quantity:</div>
+            <div className="text-[#666666]">{t('Minimum Order Quantity')}:</div>
             <div className=" text-[#222222]">{minOrder}</div>
           </div>
           <div className='flex gap-x-3 justify-between'>
-            <div className="text-[#666666]">Delivery Timeframe:</div>
+            <div className="text-[#666666]">{t('Delivery Timeframe')}:</div>
             <div className=" text-[#222222]">{deliveryTimeframe}</div>
           </div>
           <div className='flex gap-x-3 justify-between'>
-            <div className="text-[#666666]">Delivery:</div>
+            <div className="text-[#666666]">{t('Delivery')}:</div>
             <div className=" text-[#222222]">{delivery}</div>
           </div>
         </div>
         {/* Participants */}
         <div className='mt-12 flex justify-between gap-x-3 mb-6'>
-          <div className="text-[##222222] text-2xl mb-2">Participants</div>
+          <div className="text-[##222222] text-2xl mb-2">{t('Participants')}</div>
           <div className="flex items-center gap-2">
             {participants.map((p, i) => (
               <img key={i} src={p} className="w-[40px] h-[40px] object-cover rounded-full border-2 border-white -ms-2 first:ms-0" alt="participant" />

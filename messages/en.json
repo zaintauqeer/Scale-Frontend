@@ -92,7 +92,13 @@
   },
   "liveDeals":{
       "subTitle":"Live deals",
-      "title":"Explore our latest deals"
+      "title":"Explore our latest deals",
+      "About to meet MOQ": "About to meet MOQ",
+      "About to end": "About to end",
+      "Aggregate and Sand": "Aggregate and Sand",
+      "Block": "Block",
+      "Cement": "Cement",
+      "Wood": "Wood"
   },
   "dealBox":{
     "Time Left": "Time Left",
@@ -101,9 +107,15 @@
     "Minimum Order Quantity":"Minimum Order Quantity",
     "Delivery Timeframe": "Delivery Timeframe",
     "Delivery":"Delivery",
+    "Participants":"Participants",
     "Join now":"Join now",
     "Share":"Share",
     "for more to join":"for more to join"
+  },
+  "dealTabs":{
+    "Description":"Description",
+    "Terms & Notes":"Terms & Notes",
+    "Payment Instruction":"Payment Instruction"
   }
 
 }

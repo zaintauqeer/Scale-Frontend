@@ -54,7 +54,7 @@ const DealBox = ({
         </p>
       </div>
       <div className="mt-9 flex justify-between items-center mb-6">
-        <h3 className="text-xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold">Participants</h3>
+        <h3 className="text-xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold">{t('Participants')}</h3>
         <div className="flex items-center">
           <img
             src={participants[0]}

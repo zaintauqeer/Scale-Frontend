@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { useTranslations } from 'next-intl'
 
-const tabHeadings = ["Description", "Terms & Notes", "Payment Instruction"];
 
 const DealTabs = () => {
   const [activeTab, setActiveTab] = useState(0);
-
+  const t = useTranslations('dealTabs')
+  const tabHeadings = [t('Description'), t('Terms & Notes'), t('Payment Instruction')];
   return (
     <div className="lg:px-20 px-5">
       <div className="flex border-b border-[#00000033] mb-4">
