@@ -14,9 +14,9 @@ const HowItWorks = () => {
                 </div>
                 <h2 className='lg:text-5xl text-3xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold my-5'>{t('title')}</h2>
                 <p className='text-[#00000099] text-xl lg:max-w-2xl m-auto'>{t('description')}</p>
-                <div className='mt-10'>
-                    <Link href='/deals' className="bg-[#F15625] text-white lg:px-11 px-8 lg:py-5 py-2.5 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border rtl:font-sans rtl:font-semibold border-[#F15625]">{g('viewLiveDeals')}</Link>
-                    <Link href='/deals' className=" text-black lg:px-11 px-4 lg:py-5 py-2.5 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border rtl:font-sans rtl:font-semibold border-black ms-5">{g('orderViaWhatsapp')}</Link>
+                <div className='mt-10 lg:gap-5 gap-3 flex flex-wrap justify-center'>
+                    <Link href='/deals' className="bg-[#F15625] text-white lg:px-11 px-8 lg:py-5 py-2.5 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border rtl:font-sans rtl:font-semibold border-[#F15625] lg:grow-0 grow text-center">{g('viewLiveDeals')}</Link>
+                    <Link href='/deals' className=" text-black lg:px-11 px-4 lg:py-5 py-2.5 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border rtl:font-sans rtl:font-semibold border-black lg:grow-0 grow text-center">{g('orderViaWhatsapp')}</Link>
                 </div>
             </div>
             <div  className="flex flex-wrap mt-10 items-center">

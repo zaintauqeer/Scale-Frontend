@@ -11,7 +11,7 @@ const DealTabs = () => {
         {tabHeadings.map((heading, idx) => (
           <button
             key={heading}
-            className={`px-4 py-2 font-[Outfit-Meedium] rtl:font-sans rtl:font-medium focus:outline-none transition-colors duration-200 border-b-2 ${activeTab === idx
+            className={`px-4 py-2 font-[Outfit-Medium] rtl:font-sans rtl:font-medium focus:outline-none transition-colors duration-200 border-b-2 ${activeTab === idx
               ? "border-[#F25550] text-[#F25550]"
               : "border-transparent text-[#222222]"
               }`}
@@ -24,7 +24,7 @@ const DealTabs = () => {
       <div className="p-4">
         {activeTab === 0 && (
           <div className="text-[#666666] text-xl">
-            <h4 className="text-2xl text-[#222222] mb-5 font-[Outfit-Meedium] rtl:font-sans rtl:font-medium">
+            <h4 className="text-2xl text-[#222222] mb-5 font-[Outfit-Medium] rtl:font-sans rtl:font-medium">
               Notes
             </h4>
             <p>
@@ -35,7 +35,7 @@ const DealTabs = () => {
               odio maecenas sed fermentum suspendisse enim in ornare. Pulvinar
               penatibus amet facilisis est gravida tellus.
             </p>
-            <h4 className="text-2xl text-[#222222] mb-5 mt-6 font-[Outfit-Meedium] rtl:font-sans rtl:font-medium">
+            <h4 className="text-2xl text-[#222222] mb-5 mt-6 font-[Outfit-Medium] rtl:font-sans rtl:font-medium">
               Product 1:
             </h4>
             <p>
@@ -46,7 +46,7 @@ const DealTabs = () => {
               (2) Lorem ipsum dolor sit amet consectetur. Ultricies porttitor
               amet quis faucibus in sapien phasellus tincidunt
             </p>
-            <h4 className="text-2xl text-[#222222] mb-5 mt-6 font-[Outfit-Meedium] rtl:font-sans rtl:font-medium">
+            <h4 className="text-2xl text-[#222222] mb-5 mt-6 font-[Outfit-Medium] rtl:font-sans rtl:font-medium">
               Product 2:
             </h4>
             <p>
@@ -57,7 +57,7 @@ const DealTabs = () => {
               (2) Lorem ipsum dolor sit amet consectetur. Ultricies porttitor
               amet quis faucibus in sapien phasellus tincidunt
             </p>
-            <h4 className="text-2xl text-[#222222] mb-5 mt-6 font-[Outfit-Meedium] rtl:font-sans rtl:font-medium">
+            <h4 className="text-2xl text-[#222222] mb-5 mt-6 font-[Outfit-Medium] rtl:font-sans rtl:font-medium">
               Product 3:
             </h4>
             <p>
@@ -68,7 +68,7 @@ const DealTabs = () => {
               (2) Lorem ipsum dolor sit amet consectetur. Ultricies porttitor
               amet quis faucibus in sapien phasellus tincidunt
             </p>
-            <h4 className="text-2xl text-[#222222] mb-5 mt-6 font-[Outfit-Meedium] rtl:font-sans rtl:font-medium">
+            <h4 className="text-2xl text-[#222222] mb-5 mt-6 font-[Outfit-Medium] rtl:font-sans rtl:font-medium">
               Market Price Comparison
             </h4>
             <div className="flex gap-x-5">
@@ -89,12 +89,12 @@ const DealTabs = () => {
         )}
         {activeTab === 1 && (
           <div>
-            <h4 className="font-[Outfit-Meedium] rtl:font-sans rtl:font-medium text-[#222222] text-2xl">
+            <h4 className="font-[Outfit-Medium] rtl:font-sans rtl:font-medium text-[#222222] text-2xl">
               Terms & Important Notes
             </h4>
             <ul className="text-[#666666] mt-5 text-xl list-disc ps-4 flex flex-col gap-y-5">
               <li>
-                <span className="font-[Outfit-Meedium] rtl:font-sans rtl:font-medium">
+                <span className="font-[Outfit-Medium] rtl:font-sans rtl:font-medium">
                   Group-Based Pricing:
                 </span>
                 <br /> The final deal price is valid only if the minimum number
@@ -103,7 +103,7 @@ const DealTabs = () => {
                 refunded in full.
               </li>
               <li>
-                <span className="font-[Outfit-Meedium] rtl:font-sans rtl:font-medium">
+                <span className="font-[Outfit-Medium] rtl:font-sans rtl:font-medium">
                   Payment Confirmation:
                 </span>
                 <br /> Your order is only confirmed once full payment is
@@ -111,7 +111,7 @@ const DealTabs = () => {
                 will not be processed.
               </li>
               <li>
-                <span className="font-[Outfit-Meedium] rtl:font-sans rtl:font-medium">
+                <span className="font-[Outfit-Medium] rtl:font-sans rtl:font-medium">
                   Estimated Delivery Time:
                 </span>
                 <br /> Ordersare dispatched only after the deal closes and the
@@ -119,14 +119,14 @@ const DealTabs = () => {
                 on the supplier location and shipment volume.
               </li>
               <li>
-                <span className="font-[Outfit-Meedium] rtl:font-sans rtl:font-medium">
+                <span className="font-[Outfit-Medium] rtl:font-sans rtl:font-medium">
                   Product Availability:
                 </span>
                 <br /> In rare cases where the product becomes unavailable after
                 the deal ends, you will be notified and refunded promptly.
               </li>
               <li>
-                <span className="font-[Outfit-Meedium] rtl:font-sans rtl:font-medium">
+                <span className="font-[Outfit-Medium] rtl:font-sans rtl:font-medium">
                   Refunds & Cancellations:
                 </span>
                 <br /> Refunds are only issued if the deal does not reach the
@@ -135,7 +135,7 @@ const DealTabs = () => {
                 for refunds.
               </li>
               <li>
-                <span className="font-[Outfit-Meedium] rtl:font-sans rtl:font-medium">
+                <span className="font-[Outfit-Medium] rtl:font-sans rtl:font-medium">
                   Support & Communication:
                 </span>
                 <br /> All updates regarding your order will be shared via
@@ -143,7 +143,7 @@ const DealTabs = () => {
                 support team directly through the quick support link provided.
               </li>
               <li>
-                <span className="font-[Outfit-Meedium] rtl:font-sans rtl:font-medium">
+                <span className="font-[Outfit-Medium] rtl:font-sans rtl:font-medium">
                   Images & Descriptions:
                 </span>
                 <br /> Product images are for reference only. Please review
@@ -154,7 +154,7 @@ const DealTabs = () => {
         )}
         {activeTab === 2 && (
           <div>
-            <h4 className="text-2xl text-[#222222] mb-5 font-[Outfit-Meedium] rtl:font-sans rtl:font-medium">
+            <h4 className="text-2xl text-[#222222] mb-5 font-[Outfit-Medium] rtl:font-sans rtl:font-medium">
               Payment Guidelines
             </h4>
             <p className="text-[#666666] text-xl">

@@ -20,7 +20,7 @@ const ContactUs = () => {
                     <div className="mt-16 flex gap-x-3">
                         <img src="/icons/whatsapp-icon.svg" alt="" />
                         <div>
-                            <h6 className="text-xl font-[Outfit-Meedium] rtl:font-sans rtl:font-medium text-[#222222]">{t('Chat with us on WhatsApp')}</h6>
+                            <h6 className="text-xl font-[Outfit-Medium] rtl:font-sans rtl:font-medium text-[#222222]">{t('Chat with us on WhatsApp')}</h6>
                             <a className="text-xl text-[#5C90EB]" href="mailto:hello@scaleksa.com">hello@scaleksa.com</a>
                         </div>
                     </div>

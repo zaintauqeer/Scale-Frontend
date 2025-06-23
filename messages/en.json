@@ -89,6 +89,21 @@
   "dealOfTheMonth":{
     "endsIn": "Ends in:",
     "viewDeals": "View Deals"
+  },
+  "liveDeals":{
+      "subTitle":"Live deals",
+      "title":"Explore our latest deals"
+  },
+  "dealBox":{
+    "Time Left": "Time Left",
+    "Supplier": "Supplier",
+    "Delivery Area": "Delivery Area",
+    "Minimum Order Quantity:":"Minimum Order Quantity",
+    "Delivery Timeframe": "Delivery Timeframe",
+    "Delivery":"Delivery",
+    "Join now":"Join now",
+    "Share":"Share",
+    "for more to join":"for more to join"
   }
 
 }

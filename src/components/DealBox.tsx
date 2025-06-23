@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useTranslations } from 'next-intl';
 const DealBox = ({
   image,
   title,
@@ -29,6 +29,7 @@ const DealBox = ({
   deliveryTimeframe: string;
   delivery: string;
 }) => {
+  const t = useTranslations('dealBox');
   return (
     <div className="mt-10 rounded-sm bg-[#F2F2F2] border border-[#0000000A] p-5">
       <div className="bg-white w-full aspect-video flex justify-center items-center">
@@ -85,28 +86,28 @@ const DealBox = ({
       </div>
       <div className="grid gap-4 grid-cols-2">
         <div>
-          <span className="text-[#666666] lg:text-base text-xs block mb-5">Supplier:</span>
+          <span className="text-[#666666] lg:text-base text-xs block mb-5">{t('Supplier')}:</span>
           <div className="flex items-center ">
             <img src={supplierImg} className="w-6 aspect-square rounded-full border border-[#DDDDDD]" alt="" />
             <h5 className="text-[#222222] ms-3 lg:text-xl font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold">{supplierName}</h5>
           </div>
-          <span className="text-[#666666] lg:text-base text-xs block mb-5 mt-6">Minimum Oder Quantity:</span>
+          <span className="text-[#666666] lg:text-base text-xs block mb-5 mt-6">{t('Minimum Oder Quantity')}:</span>
           <h5 className="text-[#222222] lg:text-xl font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold">{minOrder}</h5>
         </div>
         <div>
-          <span className="text-[#666666] lg:text-base text-xs block mb-5">Delivery Timeframe:</span>
+          <span className="text-[#666666] lg:text-base text-xs block mb-5">{t('Delivery Timeframe')}:</span>
           <h5 className="text-[#222222] lg:text-xl font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold">{deliveryTimeframe}</h5>
-          <span className="text-[#666666] lg:text-base text-xs block mb-5 mt-6">Delivery:</span>
+          <span className="text-[#666666] lg:text-base text-xs block mb-5 mt-6">{t('Delivery')}:</span>
           <h5 className="text-[#222222] lg:text-xl font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold">{delivery}</h5>
         </div>
       </div>
       <div className='mt-10 flex gap-6'>
             <button  className="bg-[#F25550] text-center flex-auto  text-white px-6 py-4 rounded-sm inline-block menu-btn leading-[1.2] font-['Outfit-SemiBold'] 
- rtl:font-sans rtl:font-semibold border rtl:font-sans rtl:font-semibold border-[#F15625]">Join now</button>
+ rtl:font-sans rtl:font-semibold border rtl:font-sans rtl:font-semibold border-[#F15625]">{t('Join now')}</button>
             <button  className="w-max whitespace-nowrap text-[#222222] px-6 py-[14px] rounded-sm menu-btn leading-[1.2] font-['Outfit-SemiBold'] 
  rtl:font-sans rtl:font-semibold border rtl:font-sans rtl:font-semibold border-[#DDDDDD] flex gap-x-2 items-center">
               <img src="/icons/share-icon.svg" alt="" />
-              Share <span className="hidden lg:inline">for more to join</span>
+              {t('Share')} <span className="hidden lg:inline">{t('for more to join')}</span>
             </button>
         </div>
     </div>

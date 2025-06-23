@@ -12,9 +12,9 @@ const SmallBanner = () => {
                 <h4 className='lg:text-[40px] text-3xl text-white font-[Outfit-Bold] rtl:font-sans rtl:font-bold'>{t('title')}</h4>
                 <p className='text-[#FFFFFFB2] text-xl mt-3'>{t('description')}</p>
             </div>
-            <div className='lg:w-3/5 w-full flex justify-end'>
-                <Link href='/deals' className="bg-[#F15625] text-white px-11 py-5 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border rtl:font-sans rtl:font-semibold border-[#F15625]">{g('viewLiveDeals')}</Link>
-                <Link href='/deals' className=" text-white px-5 py-5 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border rtl:font-sans rtl:font-semibold border-white ms-5">{g('orderViaWhatsapp')}</Link>
+            <div className='lg:w-3/5 w-full flex justify-end lg:gap-5 gap-3 flex-wrap'>
+                <Link href='/deals' className="bg-[#F15625] text-white lg:px-11 px-7 lg:py-5 py-2.5 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border rtl:font-sans rtl:font-semibold border-[#F15625] lg:grow-0 grow text-center">{g('viewLiveDeals')}</Link>
+                <Link href='/deals' className=" text-white lg:px-5 px-4 lg:py-5 py-2.5 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border rtl:font-sans rtl:font-semibold border-white lg:grow-0 grow text-center">{g('orderViaWhatsapp')}</Link>
             </div>
         </div>
     </div>

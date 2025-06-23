@@ -85,6 +85,26 @@
   },
   "footer":{
     "copyright": "© 2025 سكيل إنك. كل الحقوق محفوظة.s"
+  },
+  "dealOfTheMonth":{
+    "endsIn": "ينتهي في:",
+    "viewDeals": "عرض العروض"
+  },
+  "liveDeals":{
+      "subTitle":"صفقات حية",
+      "title":"اكتشف أحدث عروضنا"
+  },
+  "dealBox":{
+    "Time Left": "الوقت المتبقي",
+    "Supplier": "مزود",
+    "Delivery Area": "منطقة التسليم",
+    "Minimum Order Quantity:":"الحد الأدنى لكمية الطلب",
+    "Delivery Timeframe": "الإطار الزمني للتسليم",
+    "Delivery":"توصيل",
+    "Join now":"انضم الآن",
+    "Share":"شارك",
+    "for more to join":"لمزيد من الانضمام"
+
   }
 
 }

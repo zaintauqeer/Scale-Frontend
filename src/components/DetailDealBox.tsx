@@ -107,12 +107,12 @@ const DetailDealBox = ({
         </div>
       </div>
       {/* Information Section */}
-      <div className="gap-5 w-7/12">
+      <div className="gap-5 lg:w-7/12">
         <div className='flex gap-6 flex-wrap justify-between pb-5 border-b border-[#DDDDDD]'>
-          <h2 className="lg:text-[32px] font-bold mb-2">{title}</h2>
-          <span className="lg:text-[32px] text-lg font-semibold text-[#F25550]">{price}</span>
+          <h2 className="lg:text-[32px] font-[Outfit-Bold] rtl:font-sans rtl:font-bold mb-2">{title}</h2>
+          <span className="lg:text-[32px] text-lg font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold text-[#F25550]">{price}</span>
         </div>
-        <div className="mt-12 flex flex-col gap-5 font-[Outfit-Meedium] rtl:font-sans rtl:font-medium text-xl">
+        <div className="mt-12 flex flex-col gap-5 font-[Outfit-Medium] rtl:font-sans rtl:font-medium text-xl">
           <div className='flex gap-x-3 justify-between'>
             <div className="text-[#666666]">Time Left:</div>
             <div className=" text-[#F25550]">{timeLeft}</div>
@@ -152,7 +152,7 @@ const DetailDealBox = ({
             {participants.map((p, i) => (
               <img key={i} src={p} className="w-[40px] h-[40px] object-cover rounded-full border-2 border-white -ms-2 first:ms-0" alt="participant" />
             ))}
-            <div className="w-[40px] h-[40px] bg-gray-200 rounded-full flex items-center justify-center text-xs font-semibold text-gray-700 border-2 border-white -ms-2">
+            <div className="w-[40px] h-[40px] bg-gray-200 rounded-full flex items-center justify-center text-xs font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold text-gray-700 border-2 border-white -ms-2">
               +{participantsExtra}
             </div>
           </div>
@@ -166,8 +166,8 @@ const DetailDealBox = ({
         </div>
         {/* Action Buttons */}
         <div className="flex gap-4 mt-12">
-          <button className="bg-[#F25550] flex-auto text-white px-6 py-3 rounded font-semibold">Join now</button>
-          <button className="border border-gray-300 px-6 py-3 rounded font-semibold flex items-center gap-2">
+          <button className="bg-[#F25550] flex-auto text-white px-6 py-3 rounded font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold">Join now</button>
+          <button className="border border-gray-300 px-6 py-3 rounded font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold flex items-center gap-2">
             <img src="/icons/share-icon.svg" alt="Share" className="w-4 h-4" />
             Share <span className="hidden lg:inline">for more to join</span>
           </button>

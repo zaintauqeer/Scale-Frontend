@@ -49,7 +49,7 @@ const FaqSection: React.FC = () => {
             <span className="uppercase text-[#F15625] font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold">{t('subTitle')}</span>
           </div>
           <div className="flex justify-between items-baseline">
-            <h2 className="text-5xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold my-5 max-w-lg">{t('title')}</h2>
+            <h2 className="lg:text-5xl text-3xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold my-5 max-w-lg">{t('title')}</h2>
           </div>
           <p className="text-[#00000099] text-xl max-w-2xl">
             {t('description')}
@@ -65,9 +65,9 @@ const FaqSection: React.FC = () => {
                     onClick={() => toggle(index)}
                     className="w-full flex justify-between items-center text-left"
                   >
-                    <span className="text-xl font-[Outfit-Medium] rtl:font-sans rtl:font-medium">{faq.question}</span>
+                    <span className="lg:text-xl font-[Outfit-Medium] rtl:font-sans rtl:font-medium">{faq.question}</span>
                     <svg
-                      className={`w-5 h-5 transform transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""
+                      className={`w-5 h-5 lg:text-base text-xs transform transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""
                         }`}
                       fill="none"
                       stroke="currentColor"

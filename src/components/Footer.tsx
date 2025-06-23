@@ -9,9 +9,9 @@ const Footer = () => {
     <div className='bg-[#0A1816] lg:pt-[72px] lg:px-20 px-5 lg:pb-11 pb-7 pt-10'>
         <div className="text-center place-items-center">
             <img src="/Logo-White.png" alt="" />
-            <div className='mt-10'>
-                <Link href='/deals' className="bg-[#F15625] text-white px-6 py-4 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border rtl:font-sans rtl:font-semibold border-[#F15625]">{g('viewLiveDeals')}</Link>
-                <Link href='/deals' className=" text-white px-6 py-4 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border rtl:font-sans rtl:font-semibold border-white ms-5">{g('orderViaWhatsapp')}</Link>
+            <div className='mt-10 flex lg:gap-5 gap-3 flex-wrap'>
+                <Link href='/deals' className="bg-[#F15625] text-white px-6 py-4 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border rtl:font-sans rtl:font-semibold border-[#F15625] lg:grow-0 grow text-center">{g('viewLiveDeals')}</Link>
+                <Link href='/deals' className=" text-white px-6 py-4 rounded-sm inline-block menu-btn leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border rtl:font-sans rtl:font-semibold border-white lg:grow-0 grow text-center">{g('orderViaWhatsapp')}</Link>
             </div>
             <ul className='flex gap-x-3 list-none p-0 m-0 justify-center items-center mt-10 mb-11'>
                 <li>
