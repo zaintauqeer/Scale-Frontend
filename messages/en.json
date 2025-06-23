@@ -115,7 +115,25 @@
   "dealTabs":{
     "Description":"Description",
     "Terms & Notes":"Terms & Notes",
-    "Payment Instruction":"Payment Instruction"
+    "Payment Instruction":"Payment Instruction",
+    "Notes": "Notes",
+    "Terms & Important Notes":"Terms & Important Notes",
+    "Group-Based Pricing":"Group-Based Pricing",
+    "Payment Confirmation":"Payment Confirmation",
+    "Estimated Delivery Time":"Estimated Delivery Time",
+    "Product Availability":"Product Availability",
+    "Refunds & Cancellations":"Refunds & Cancellations",
+    "Support & Communication":"Support & Communication",
+    "Images & Descriptions":"Images & Descriptions",
+    "p1":"The final deal price is valid only if the minimum number of buyers join before the deadline. If the deal does not meet the required number of participants, your payment will be",
+    "p2":"Your order is only confirmed once full payment is received through the provided secure payment link. Unpaid orders  will not be processed.",
+    "p3":"Ordersare dispatched only after the deal closes and the bulk order is processed. Delivery timelines may vary depending on the supplier location and shipment volume.",
+    "p4":"In rare cases where the product becomes unavailable after the deal ends, you will be notified and refunded promptly.",
+    "p5":"Refunds are only issued if the deal does not reach the minimum buyer count or if the order is canceled by the supplier. Buyer-initiated cancellations after payment may not be eligible.",
+    "p6":"All updates regarding your order will be shared via WhatsApp or email. For any questions, feel free to contact our support team directly through the quick support link provided.",
+    "p7":"Product images are for reference only. Please review product specs and descriptions carefully before joining a deal.",
+    "Payment Guidelines":"Payment Guidelines",
+    "guidelinesPara":"To secure your spot in this group deal, we kindly ask you to complete the payment in advance using the secure link we’ll send after you join. This helps us confirm your participation and include your order in the collective shipment with others. Once your payment is successfully received, your order will be officially locked in at the discounted price — no surprises or hidden charges. You’ll receive a confirmation receipt via email or WhatsApp, along with updates about the next steps in the fulfillment process. If you have any questions during or after payment, our support team is just a message away and happy to assist. Thank you for being part of the ter shopping starts here!"
   }
 
 }

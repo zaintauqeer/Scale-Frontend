@@ -26,7 +26,7 @@ const DealTabs = () => {
         {activeTab === 0 && (
           <div className="text-[#666666] text-xl">
             <h4 className="text-2xl text-[#222222] mb-5 font-[Outfit-Medium] rtl:font-sans rtl:font-medium">
-              Notes
+              {t('Notes')}
             </h4>
             <p>
               Lorem ipsum dolor sit amet consectetur. Ultricies porttitor amet
@@ -91,64 +91,51 @@ const DealTabs = () => {
         {activeTab === 1 && (
           <div>
             <h4 className="font-[Outfit-Medium] rtl:font-sans rtl:font-medium text-[#222222] text-2xl">
-              Terms & Important Notes
+              {t('Terms & Important Notes')}
             </h4>
             <ul className="text-[#666666] mt-5 text-xl list-disc ps-4 flex flex-col gap-y-5">
               <li>
                 <span className="font-[Outfit-Medium] rtl:font-sans rtl:font-medium">
-                  Group-Based Pricing:
+                  {t('Group-Based Pricing')}:
                 </span>
-                <br /> The final deal price is valid only if the minimum number
-                of buyers join before the deadline. If the deal does not meet
-                the required number of participants, your payment will be
+                <br />{t('para1')}
                 refunded in full.
               </li>
               <li>
                 <span className="font-[Outfit-Medium] rtl:font-sans rtl:font-medium">
-                  Payment Confirmation:
+                  {t('Payment Confirmation')}:
                 </span>
-                <br /> Your order is only confirmed once full payment is
-                received through the provided secure payment link. Unpaid orders
-                will not be processed.
+                <br />{t('para2')}
               </li>
               <li>
                 <span className="font-[Outfit-Medium] rtl:font-sans rtl:font-medium">
-                  Estimated Delivery Time:
+                  {t('Estimated Delivery Time')}:
                 </span>
-                <br /> Ordersare dispatched only after the deal closes and the
-                bulk order is processed. Delivery timelines may vary depending
-                on the supplier location and shipment volume.
+                <br />{t('para3')}
               </li>
               <li>
                 <span className="font-[Outfit-Medium] rtl:font-sans rtl:font-medium">
-                  Product Availability:
+                  {t('Product Availability')}:
                 </span>
-                <br /> In rare cases where the product becomes unavailable after
-                the deal ends, you will be notified and refunded promptly.
+                <br />{t('para4')}
               </li>
               <li>
                 <span className="font-[Outfit-Medium] rtl:font-sans rtl:font-medium">
-                  Refunds & Cancellations:
+                  {t('Refunds & Cancellations')}:
                 </span>
-                <br /> Refunds are only issued if the deal does not reach the
-                minimum buyer count or if the order is canceled by the supplier.
-                Buyer-initiated cancellations after payment may not be eligible
-                for refunds.
+                <br />{t('para5')}
               </li>
               <li>
                 <span className="font-[Outfit-Medium] rtl:font-sans rtl:font-medium">
-                  Support & Communication:
+                  {t('Support & Communication')}:
                 </span>
-                <br /> All updates regarding your order will be shared via
-                WhatsApp or email. For any questions, feel free to contact our
-                support team directly through the quick support link provided.
+                <br />{t('para6')}
               </li>
               <li>
                 <span className="font-[Outfit-Medium] rtl:font-sans rtl:font-medium">
-                  Images & Descriptions:
+                  {t('Images & Descriptions')}:
                 </span>
-                <br /> Product images are for reference only. Please review
-                product specs and descriptions carefully before joining a deal.
+                <br />{t('para7')}
               </li>
             </ul>
           </div>
@@ -156,7 +143,7 @@ const DealTabs = () => {
         {activeTab === 2 && (
           <div>
             <h4 className="text-2xl text-[#222222] mb-5 font-[Outfit-Medium] rtl:font-sans rtl:font-medium">
-              Payment Guidelines
+              {t('Payment Guidelines')}
             </h4>
             <p className="text-[#666666] text-xl">
               To secure your spot in this group deal, we kindly ask you to
