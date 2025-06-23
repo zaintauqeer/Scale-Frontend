@@ -4,18 +4,20 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useTranslations } from 'next-intl';
+import { useState } from 'react';
 
 export default function Navbar() {
   const pathname = usePathname();
   const t = useTranslations('navbar');
   const g = useTranslations('global')
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   // Extract the path without locale prefix
   const pathWithoutLocale = pathname?.split('/').slice(2).join('/');
   const basePath = '/' + pathWithoutLocale;
 
   return (
-    <nav className='lg:px-20 px-8'> 
+    <nav className='lg:px-20 px-8 relative'> 
       <div className="flex items-center justify-between w-full py-4">
         {/* Logo */}
         <div className="flex-shrink-0">
@@ -55,9 +57,42 @@ export default function Navbar() {
           </Link>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden bg-white rounded-sm border-0 p-1.5">
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)} 
+            className="md:hidden bg-white rounded-sm border-0 p-1.5"
+          >
             <img src="icons/menu-icon.svg" alt="" />
           </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
+        <div className="flex flex-col p-4">
+          <button 
+            onClick={() => setIsMenuOpen(false)}
+            className="self-end p-2"
+          >
+            <img src="icons/close-icon.svg" alt="Close menu" className="w-6 h-6" />
+          </button>
+          
+          <div className="flex flex-col space-y-4 mt-8">
+            <Link href="/deals" className={`${basePath === '/deals' ? 'text-[#f25550]' : ''} text-lg`}>
+              {t('deals')}
+            </Link>
+            <Link href="/how-it-works" className={`${basePath === '/how-it-works' ? 'text-[#f25550]' : ''} text-lg`}>
+              {t('howItWorks')}
+            </Link>
+            <Link href="/about" className={`${basePath === '/about' ? 'text-[#f25550]' : ''} text-lg`}>
+              {t('about')}
+            </Link>
+            <Link href="/contact-us" className={`${basePath === '/contact-us' ? 'text-[#f25550]' : ''} text-lg`}>
+              {t('contactUs')}
+            </Link>
+            <div className="mt-4">
+              <LanguageSwitcher />
+            </div>
+          </div>
         </div>
       </div>
     </nav>

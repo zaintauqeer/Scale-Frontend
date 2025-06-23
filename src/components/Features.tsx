@@ -10,26 +10,26 @@ const Features = () => {
                 </div>
                 <h2 className='lg:text-5xl text-3xl font-[Outfit-Bold] my-5'>Our Key Features</h2>
                 <p className='text-[#00000099] text-xl max-w-2xl m-auto'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendisse adipiscing diam quis. </p>
-                <div className="lg:mt-14 mt-64 lg:py-16 relative px-24 isolate lg:bg-[linear-gradient(90deg,#fff_0%,#fff_10.33%,#1A3D38_10.33%,#1A3D38_90.67%,#fff_90.67%,#fff_100%)] bg-[#1A3D38]">
-                    <img src="/s-mark-green.svg" className='block absolute left-0 top-0 lg:translate-y-0 -translate-y-1/2 lg:h-full max-w-full -z-10' alt="" />
-                    <img src="/s-mark-green.svg" className='block absolute right-0 top-0 lg:h-full max-w-full -z-10' alt="" />
+                <div className="lg:mt-14 lg:mb-0 mb-64 mt-64 lg:py-16 relative lg:px-24 px-14 isolate lg:bg-[linear-gradient(90deg,#fff_0%,#fff_10.33%,#1A3D38_10.33%,#1A3D38_90.67%,#fff_90.67%,#fff_100%)] bg-[#1A3D38]">
+                    <img src="/s-mark-green.svg" className='block absolute left-0 top-0 lg:translate-y-0 -translate-y-[calc(50%-50px)] lg:h-full max-w-full -z-10' alt="" />
+                    <img src="/s-mark-green.svg" className='block absolute right-0 lg:top-0 bottom-0 lg:translate-y-0 translate-y-[calc(50%-50px)] lg:h-full max-w-full -z-10' alt="" />
                     <div className="flex flex-wrap">
-                        <div className="md:w-1/3 w-full">
-                            <div className="text-center place-items-center text-white lg:px-15">
+                        <div className="md:w-1/3 w-full lg:border-e lg:border-b-0 border-b border-dashed border-[#FFFFFF99]">
+                            <div className="text-center place-items-center text-white lg:px-15 lg:pb-0 pb-6">
                                 <img src="/icons/design_safety-certificate.svg" alt="" />
                                 <h5 className='font-[Outfit-SemiBold] text-xl mt-6 mb-4'>Guaranteed Prices Lower Than Market</h5>
                                 <p>Join other yards and unlock bulk prices normally reserved for big factories. Save 5–15% on essential materials like blocks, cement, and more.</p>
                             </div>
                         </div>
-                        <div className="md:w-1/3 w-full">
-                            <div className="text-center place-items-center text-white lg:px-15">
+                        <div className="md:w-1/3 w-full lg:border-e lg:border-b-0 border-b border-dashed border-[#FFFFFF99]">
+                            <div className="text-center place-items-center text-white lg:px-15 lg:py-0 py-6">
                                 <img src="/icons/design_safety-certificate.svg" alt="" />
                                 <h5 className='font-[Outfit-SemiBold] text-xl mt-6 mb-4'>Full Ordering Through WhatsApp</h5>
                                 <p>Join other yards and unlock bulk prices normally reserved for big factories. Save 5–15% on essential materials like blocks, cement, and more.</p>
                             </div>
                         </div>
                         <div className="md:w-1/3 w-full">
-                            <div className="text-center place-items-center text-white lg:px-15">
+                            <div className="text-center place-items-center text-white lg:px-15 lg:pt-0 pt-6">
                                 <img src="/icons/design_safety-certificate.svg" alt="" />
                                 <h5 className='font-[Outfit-SemiBold] text-xl mt-6 mb-4'>Delivery Included</h5>
                                 <p>Join other yards and unlock bulk prices normally reserved for big factories. Save 5–15% on essential materials like blocks, cement, and more.</p>
