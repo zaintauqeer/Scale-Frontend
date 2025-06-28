@@ -18,21 +18,21 @@ const Features = () => {
                     <div className="flex flex-wrap">
                         <div className="md:w-1/3 w-full lg:border-e lg:border-b-0 border-b border-dashed border-[#FFFFFF99]">
                             <div className="text-center place-items-center text-white lg:px-15 lg:pb-0 pb-6">
-                                <img src="/icons/design_safety-certificate.svg" alt="" />
+                                <img src="/icons/safety-certification.svg" alt="" className='w-[41px]'/>
                                 <h5 className='font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold text-xl mt-6 mb-4'>{t('title1')}</h5>
                                 <p>{t('description1')}</p>
                             </div>
                         </div>
                         <div className="md:w-1/3 w-full lg:border-e lg:border-b-0 border-b border-dashed border-[#FFFFFF99]">
                             <div className="text-center place-items-center text-white lg:px-15 lg:py-0 py-6">
-                                <img src="/icons/design_safety-certificate.svg" alt="" />
+                                <img src="/icons/whatsapp.svg" alt="" className='w-[55px]'/>
                                 <h5 className='font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold text-xl mt-6 mb-4'>{t('title2')}</h5>
                                 <p>{t('description2')}</p>
                             </div>
                         </div>
                         <div className="md:w-1/3 w-full">
                             <div className="text-center place-items-center text-white lg:px-15 lg:pt-0 pt-6">
-                                <img src="/icons/design_safety-certificate.svg" alt="" />
+                                <img src="/icons/Delivery.svg" alt="" className='w-[52px]'/>
                                 <h5 className='font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold text-xl mt-6 mb-4'>{t('title3')}</h5>
                                 <p>{t('description3')}</p>
                             </div>

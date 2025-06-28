@@ -55,7 +55,7 @@ const FaqSection: React.FC = () => {
           <p className="text-[#00000099] text-xl max-w-2xl">
             {t('description')}
           </p>
-          <div className="bg-[#F25550] py-5 px-6 mt-10 rounded-xl">
+          <div className="bg-[#F05526] py-5 px-6 mt-10 rounded-xl">
             <h4 className="flex items-center gap-x-2 text-white lg:text-xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold"><img src="icons/chat-icon.svg" alt="" /> You have different questions?</h4>
             <p className="lg:text-lg mt-2 text-[#FFFFFF99]">Our team will answer all your questions,we ensure a quick responce</p>
             <Link href="#contact-us" className="lg:py-3 lg:px-11 py-2 px-4 text-[#1A3D38] font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold bg-[#FFFFFF] rounded-sm inline-block mt-5">Contact our team</Link>

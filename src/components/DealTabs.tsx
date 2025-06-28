@@ -13,7 +13,7 @@ const DealTabs = () => {
           <button
             key={heading}
             className={`px-4 py-2 font-[Outfit-Medium] rtl:font-sans rtl:font-medium focus:outline-none transition-colors duration-200 border-b-2 ${activeTab === idx
-              ? "border-[#F25550] text-[#F25550]"
+              ? "border-[#F05526] text-[#F05526]"
               : "border-transparent text-[#222222]"
               }`}
             onClick={() => setActiveTab(idx)}

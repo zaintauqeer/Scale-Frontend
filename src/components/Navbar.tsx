@@ -28,16 +28,16 @@ export default function Navbar() {
 
         {/* Desktop Menu - hidden on mobile */}
         <div className={`hidden lg:flex items-center space-x-6 text-xl ${basePath === '/' ? 'text-white' : 'text-[#222222]'}`}>
-          <Link href="/deals" className={`${basePath === '/deals' ? 'text-[#f25550]' : ''} `}>
+          <Link href="/deals" className={`${basePath === '/deals' ? 'text-[#F05526]' : ''} `}>
             {t('deals')}
           </Link>
-          <Link href="/#how-it-works" className={`${basePath === '/how-it-works' ? 'text-[#f25550]' : ''}`}>
+          <Link href="/#how-it-works" className={`${basePath === '/how-it-works' ? 'text-[#F05526]' : ''}`}>
             {t('howItWorks')}
           </Link>
-          <Link href="/#about-us" className={`${basePath === '/about-us' ? 'text-[#f25550]' : ''}`}>
+          <Link href="/#about-us" className={`${basePath === '/about-us' ? 'text-[#F05526]' : ''}`}>
             {t('about')}
           </Link>
-          <Link href="/#contact-us" className={`${basePath === '/contact-us' ? 'text-[#f25550]' : ''}`}>
+          <Link href="/#contact-us" className={`${basePath === '/contact-us' ? 'text-[#F05526]' : ''}`}>
             {t('contactUs')}
           </Link>
         </div>
@@ -81,18 +81,18 @@ export default function Navbar() {
           </button>
           
           <div className="flex flex-col space-y-4 mt-8">
-            <Link href="/deals" className={`${basePath === '/deals' ? 'text-[#f25550]' : ''} text-lg`}>
+            <Link href="/deals" className={`${basePath === '/deals' ? 'text-[#F05526]' : ''} text-lg`}>
               {t('deals')}
             </Link>
             <Link 
-              href="/#how-it-works" className={`${basePath === '/how-it-works' ? 'text-[#f25550]' : ''} text-lg`}
+              href="/#how-it-works" className={`${basePath === '/how-it-works' ? 'text-[#F05526]' : ''} text-lg`}
             >
               {t('howItWorks')}
             </Link>
-            <Link href="/#about-us" className={`${basePath === '/about-us' ? 'text-[#f25550]' : ''} text-lg`}>
+            <Link href="/#about-us" className={`${basePath === '/about-us' ? 'text-[#F05526]' : ''} text-lg`}>
               {t('about')}
             </Link>
-            <Link href="/#contact-us" className={`${basePath === '/contact-us' ? 'text-[#f25550]' : ''} text-lg`}>
+            <Link href="/#contact-us" className={`${basePath === '/contact-us' ? 'text-[#F05526]' : ''} text-lg`}>
               {t('contactUs')}
             </Link>
             <div className="mt-4">

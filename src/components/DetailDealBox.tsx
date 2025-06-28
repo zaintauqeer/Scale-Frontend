@@ -96,7 +96,7 @@ const DetailDealBox = ({
                 aspect-square
                 flex items-center justify-center
 
-                ${selectedIndex === index ? 'border-[#F25550]' : 'border-transparent'}
+                ${selectedIndex === index ? 'border-[#F05526]' : 'border-transparent'}
               `}
             >
               <img
@@ -112,12 +112,12 @@ const DetailDealBox = ({
       <div className="gap-5 lg:w-7/12">
         <div className='flex gap-6 flex-wrap justify-between pb-5 border-b border-[#DDDDDD]'>
           <h2 className="lg:text-[32px] font-[Outfit-Bold] rtl:font-sans rtl:font-bold mb-2">{title}</h2>
-          <span className="lg:text-[32px] text-lg font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold text-[#F25550]">{price}</span>
+          <span className="lg:text-[32px] text-lg font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold text-[#F05526]">{price}</span>
         </div>
         <div className="mt-12 flex flex-col gap-5 font-[Outfit-Medium] rtl:font-sans rtl:font-medium text-xl">
           <div className='flex gap-x-3 justify-between'>
             <div className="text-[#666666]">{t('Time Left')}:</div>
-            <div className=" text-[#F25550]">{timeLeft}</div>
+            <div className=" text-[#F05526]">{timeLeft}</div>
           </div>
           <div className='flex gap-x-3 justify-between'>
             <div className="text-[#666666]">{t('Supplier')}:</div>
@@ -162,13 +162,13 @@ const DetailDealBox = ({
         {/* Progress Bar */}
         <div className="flex items-center gap-4">
           <div className="w-full h-[14px] bg-gray-200 rounded-full">
-            <div className="h-full bg-[#F25550] rounded-full" style={{ width: `${progress}%` }}></div>
+            <div className="h-full bg-[#F05526] rounded-full" style={{ width: `${progress}%` }}></div>
           </div>
           <span className="font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold text-lg text-[#444444]">{progress}%</span>
         </div>
         {/* Action Buttons */}
         <div className="flex gap-4 mt-12">
-          <button className="bg-[#F25550] flex-auto text-white px-6 py-3 rounded font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold">{t('Join now')}</button>
+          <button className="bg-[#F05526] flex-auto text-white px-6 py-3 rounded font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold">{t('Join now')}</button>
           <button className="border border-gray-300 px-6 py-3 rounded font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold flex items-center gap-2">
             <img src="/icons/share-icon.svg" alt="Share" className="w-4 h-4" />
             {t('Share')} <span className="hidden lg:inline">{t('for more to join')}</span>

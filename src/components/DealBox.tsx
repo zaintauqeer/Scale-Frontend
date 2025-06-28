@@ -41,7 +41,7 @@ const DealBox = ({
       </div>
       <div className="mt-9 flex justify-between items-center flex-wrap pb-5 mb-5 border-b border-[#CCCCCC]">
         <h3 className="lg:text-2xl text-xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold">{title}</h3>
-        <p className="lg:text-[28px] text-xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold text-[#F25550]">
+        <p className="lg:text-[28px] text-xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold text-[#F05526]">
           {price}
         </p>
       </div>
@@ -49,7 +49,7 @@ const DealBox = ({
         <h3 className="lg:text-xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold text-[#444444] flex items-center">
           <img src="/icons/location.svg" alt="" /> {location}
         </h3>
-        <p className="lg:text-xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold text-[#F25550]">
+        <p className="lg:text-xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold text-[#F05526]">
           {timeLeft}
         </p>
       </div>
@@ -78,7 +78,7 @@ const DealBox = ({
       </div>
       <div className="flex items-center gap-4 mb-10">
         <div className="w-full lg:h-3.5 h-2 bg-gray-200 rounded-full">
-          <div className="h-full bg-[#F25550] rounded-full" style={{width: `${progress}%`}}></div>
+          <div className="h-full bg-[#F05526] rounded-full" style={{width: `${progress}%`}}></div>
         </div>
         <span className="lg:text-2xl font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold text-[#444444]">
           {progress}%
@@ -102,8 +102,8 @@ const DealBox = ({
         </div>
       </div>
       <div className='mt-10 flex gap-6'>
-            <button  className="bg-[#F25550] text-center flex-auto  text-white px-6 py-4 rounded-sm inline-block menu-btn leading-[1.2] font-['Outfit-SemiBold'] 
- rtl:font-sans rtl:font-semibold border rtl:font-sans rtl:font-semibold border-[#F15625]">{t('Join now')}</button>
+            <button  className="bg-[#F05526] text-center flex-auto  text-white px-6 py-4 rounded-sm inline-block menu-btn leading-[1.2] font-['Outfit-SemiBold'] 
+ rtl:font-sans rtl:font-semibold border rtl:font-sans rtl:font-semibold border-[#F05526]">{t('Join now')}</button>
             <button  className="w-max whitespace-nowrap text-[#222222] px-6 py-[14px] rounded-sm menu-btn leading-[1.2] font-['Outfit-SemiBold'] 
  rtl:font-sans rtl:font-semibold border rtl:font-sans rtl:font-semibold border-[#DDDDDD] flex gap-x-2 items-center">
               <img src="/icons/share-icon.svg" alt="" />
