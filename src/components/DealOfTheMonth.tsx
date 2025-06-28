@@ -58,7 +58,7 @@ const DealBox: React.FC<DealBoxProps> = ({ title, subText, endTime }) => {
     <div className="relative bg-[#D26200] w-full rounded-lg px-6 md:px-10 py-10 min-h-[320px] md:flex flex-col md:flex-row justify-between items-center overflow-visible mt-10">
       {/* Left Content */}
       <div className="text-white md:w-1/2 w-full space-y-4 z-10">
-        <img src="/logo-white.png" alt="Logo" className="w-36 mb-8" />
+        <img src="/Logo-White.png" alt="Logo" className="w-36 mb-8" />
         <h2 className="text-5xl font-bold">{title}</h2>
         <p className="text-[28px]">{subText}</p>
         <div>
@@ -99,7 +99,7 @@ const DealBox: React.FC<DealBoxProps> = ({ title, subText, endTime }) => {
             className="w-[517px] object-contain drop-shadow-lg absolute top-[-18%] right-[55px]"
           />
           <img
-            src="/shadow.png"
+            src="/Shadow.png"
             alt="Shadow"
             className="w-[517px] object-contain drop-shadow-lg absolute bottom-[-2%] right-[55px]"
           />
