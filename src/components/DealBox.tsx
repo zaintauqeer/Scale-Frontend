@@ -53,29 +53,7 @@ const DealBox = ({
           {timeLeft}
         </p>
       </div>
-      <div className="mt-9 flex justify-between items-center mb-6">
-        <h3 className="text-xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold">{t('Participants')}</h3>
-        <div className="flex items-center">
-          <img
-            src={participants[0]}
-            className="w-[40px] h-[40px] object-cover translate-x-[150%] border-2 border-[#FFFFFF] rounded-full"
-            alt=""
-          />
-          <img
-            src={participants[1]}
-            className="w-[40px] h-[40px] object-cover translate-x-full border-2 border-[#FFFFFF] rounded-full"
-            alt=""
-          />
-          <img
-            src={participants[2]}
-            className="w-[40px] h-[40px] object-cover translate-x-1/2 border-2 border-[#FFFFFF] rounded-full"
-            alt=""
-          />
-          <div className="w-[40px] h-[40px] bg-white rounded-full z-10 flex justify-center items-center text-[#222222] text-sm font-[Outfit-Bold] rtl:font-sans rtl:font-bold">
-            +{participantsExtra}
-          </div>
-        </div>
-      </div>
+   
       <div className="flex items-center gap-4 mb-10">
         <div className="w-full lg:h-3.5 h-2 bg-gray-200 rounded-full">
           <div className="h-full bg-[#F05526] rounded-full" style={{width: `${progress}%`}}></div>
