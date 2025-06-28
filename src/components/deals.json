@@ -20,8 +20,48 @@
     "delivery": "Included"
   },
   {
-    "id": "riyadh-steel-bars",
+    "id": "jaddah-steel-bars",
     "image": "/products/product-2.png",
+    "title": "Riyadh Steel Bars",
+    "price": "22,000 SAR",
+    "location": "Riyadh, SA",
+    "timeLeft": "1 day : 80h : 30m : 10s",
+    "participants": [
+      "/participants/user-2.jpg",
+      "/participants/user-3.jpg",
+      "/participants/user-1.jpg"
+    ],
+    "participantsExtra": 3,
+    "progress": 60,
+    "supplierImg": "/supplier-img.png",
+    "supplierName": "Steel Masters",
+    "minOrder": "10 Units",
+    "deliveryTimeframe": "Mar 01, 2025 -  Mar 05, 2025",
+    "delivery": "Included"
+  },
+  {
+    "id": "riyadh-steel-bars",
+    "image": "/products/product-3.png",
+    "title": "Riyadh Steel Bars",
+    "price": "22,000 SAR",
+    "location": "Riyadh, SA",
+    "timeLeft": "1 day : 80h : 30m : 10s",
+    "participants": [
+      "/participants/user-2.jpg",
+      "/participants/user-3.jpg",
+      "/participants/user-1.jpg"
+    ],
+    "participantsExtra": 3,
+    "progress": 60,
+    "supplierImg": "/supplier-img.png",
+    "supplierName": "Steel Masters",
+    "minOrder": "10 Units",
+    "deliveryTimeframe": "Mar 01, 2025 -  Mar 05, 2025",
+    "delivery": "Included"
+  },
+  {
+    "id": "Hammad Sons Developers",
+    "image": "/products/product-1.png",
     "title": "Riyadh Steel Bars",
     "price": "22,000 SAR",
     "location": "Riyadh, SA",
