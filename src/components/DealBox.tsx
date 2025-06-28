@@ -81,7 +81,7 @@ const DealBox = ({
       </div>
       <div className='mt-10 flex gap-6'>
             <button  className="bg-[#F05526] text-center flex-auto  text-white px-6 py-4 rounded-sm inline-block menu-btn leading-[1.2] font-['Outfit-SemiBold'] 
- rtl:font-sans rtl:font-semibold border rtl:font-sans rtl:font-semibold border-[#F05526]">{t('Join now')}</button>
+ rtl:font-sans rtl:font-semibold border rtl:font-sans rtl:font-semibold border-[#F05525]">{t('Join now')}</button>
             <button  className="w-max whitespace-nowrap text-[#222222] px-6 py-[14px] rounded-sm menu-btn leading-[1.2] font-['Outfit-SemiBold'] 
  rtl:font-sans rtl:font-semibold border rtl:font-sans rtl:font-semibold border-[#DDDDDD] flex gap-x-2 items-center">
               <img src="/icons/share-icon.svg" alt="" />
