@@ -10,8 +10,7 @@ interface DetailDealBoxProps {
   price: string;
   location: string;
   timeLeft: string;
-  participants: string[];
-  participantsExtra: number;
+
   progress: number;
   supplierImg: string;
   supplierName: string;
@@ -27,8 +26,7 @@ const DetailDealBox = ({
   price,
   location,
   timeLeft,
-  participants,
-  participantsExtra,
+
   progress,
   supplierImg,
   supplierName,
@@ -148,7 +146,7 @@ const DetailDealBox = ({
           </div>
         </div>
         {/* Participants */}
-        <div className='mt-12 flex justify-between gap-x-3 mb-6'>
+        {/* <div className='mt-12 flex justify-between gap-x-3 mb-6'>
           <div className="text-[##222222] text-2xl mb-2">{t('Participants')}</div>
           <div className="flex items-center gap-2">
             {participants.map((p, i) => (
@@ -158,7 +156,7 @@ const DetailDealBox = ({
               +{participantsExtra}
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Progress Bar */}
         <div className="flex items-center gap-4">
           <div className="w-full h-[14px] bg-gray-200 rounded-full">

@@ -6,8 +6,7 @@ const DealBox = ({
   price,
   location,
   timeLeft,
-  participants,
-  participantsExtra,
+
   progress,
   supplierImg,
   supplierName,
@@ -20,8 +19,7 @@ const DealBox = ({
   price: string;
   location: string;
   timeLeft: string;
-  participants: string[];
-  participantsExtra: number;
+
   progress: number;
   supplierImg: string;
   supplierName: string;
