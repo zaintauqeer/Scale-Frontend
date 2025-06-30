@@ -55,7 +55,7 @@ const DealBox: React.FC<DealBoxProps> = ({ title, subText, endTime }) => {
   const t = useTranslations("dealOfTheMonth");
 
   return (
-    <div className="relative bg-[#D26200] w-full rounded-lg px-6 md:px-10 py-10 min-h-[320px] md:flex flex-col md:flex-row justify-between items-center overflow-visible mt-10">
+    <div className="relative bg-[#D26200] w-full lg:rounded-lg px-6 md:px-10 py-10 min-h-[320px] md:flex flex-col md:flex-row justify-between items-center overflow-visible mt-10">
       {/* Left Content */}
       <div className="text-white md:w-1/2 w-full space-y-4 z-10">
         <img src="/Logo-White.png" alt="Logo" className="w-36 mb-8" />
@@ -67,12 +67,12 @@ const DealBox: React.FC<DealBoxProps> = ({ title, subText, endTime }) => {
             {timeLeft.hours}h : {timeLeft.minutes}m : {timeLeft.seconds}s
           </p>
         </div>
-        <Link
+        {/* <Link
           href="#"
           className="mt-4 inline-block bg-white text-[#F05526] font-semibold text-[16px] px-15 py-2 rounded-sm hover:bg-gray-100 transition"
         >
           {t("viewDeals")}
-        </Link>
+        </Link> */}
       </div>
 
       {/* Right Image - Block level on mobile, floating on desktop */}
@@ -96,12 +96,12 @@ const DealBox: React.FC<DealBoxProps> = ({ title, subText, endTime }) => {
           <img
             src="/cement-image.png"
             alt="Cement Deal"
-            className="w-[517px] object-contain drop-shadow-lg absolute top-[-18%] right-[55px]"
+            className="w-[440px] object-contain drop-shadow-lg absolute top-[-22%] end-[85px]"
           />
           <img
             src="/Shadow.png"
             alt="Shadow"
-            className="w-[517px] object-contain drop-shadow-lg absolute bottom-[-2%] right-[55px]"
+            className="w-[517px] object-contain drop-shadow-lg absolute bottom-[-2%] end-[55px]"
           />
         </div>
       </div>
@@ -110,6 +110,16 @@ const DealBox: React.FC<DealBoxProps> = ({ title, subText, endTime }) => {
 };
 
 const DealOfTheMonth = () => {
+  const t = useTranslations("dealOfTheMonth");
+
+  const deals: DealItem[] = [
+    {
+      title: t("dealOfTheMonth"),
+      subText: t("saveOnMarketPrice"),
+      endTime: new Date(Date.now() + 12 * 60 * 60 * 1000).toISOString(),
+    },
+  ];
+
   return (
     <div className="lg:px-20 px-5 lg:my-16 my-8">
       <div className="flex lg:flex-nowrap flex-wrap gap-x-5">

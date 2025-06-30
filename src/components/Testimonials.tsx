@@ -18,8 +18,9 @@ const Testimonials = () => {
     return (
         <div className='lg:px-20 px-5 lg:my-24 my-8 bg-[#F4F4F4] pt-16 pb-36'>
             <div className="flex items-center gap-2">
-                <div className="w-12 h-0.5 bg-[#F15625]"></div>
+                
                 <span className='uppercase text-[#F15625] font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold'>{t('subTitle')}</span>
+                <div className="w-12 h-0.5 bg-[#F15625]"></div>
             </div>
             <div className="flex justify-between flex-wrap items-baseline">
                 <h2 className='lg:text-5xl text-3xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold my-5 max-w-lg'>{t('title')}</h2>
@@ -28,13 +29,13 @@ const Testimonials = () => {
                         className="py-3.5 px-9 border rounded-sm border-[#F15625] hover:bg-gray-100 cursor-pointer"
                         onClick={scrollPrev}
                     >
-                        <img className='rtl:rotate-180' src="icons/button-arrow.svg" alt="" />
+                        <img className='rtl:rotate-180' src="/icons/button-arrow.svg" alt="" />
                     </button>
                     <button
                         className="py-3.5 px-9 ms-5 border rounded-sm border-[#F15625] hover:bg-gray-100 cursor-pointer"
                         onClick={scrollNext}
                     >
-                        <img src="icons/button-arrow.svg" className='ltr:rotate-180' alt="" />
+                        <img src="/icons/button-arrow.svg" className='ltr:rotate-180' alt="" />
                     </button>
                 </div>
             </div>

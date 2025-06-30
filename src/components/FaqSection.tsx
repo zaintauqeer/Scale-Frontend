@@ -45,9 +45,9 @@ const FaqSection: React.FC = () => {
     <div className="lg:px-20 px-5 lg:my-24 my-8">
       <div className="flex flex-wrap gap-y-16">
         <div className="lg:ps-10 lg:w-2/6 w-full lg:pe-7">
-          <div className="flex items-center gap-2">
-            <div className="w-12 h-0.5 bg-[#F15625]"></div>
+          <div className="flex items-center gap-2">   
             <span className="uppercase text-[#F15625] font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold">{t('subTitle')}</span>
+            <div className="w-12 h-0.5 bg-[#F15625]"></div>
           </div>
           <div className="flex justify-between items-baseline">
             <h2 className="lg:text-5xl text-3xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold my-5 max-w-lg">{t('title')}</h2>

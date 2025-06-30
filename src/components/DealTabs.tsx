@@ -84,7 +84,7 @@ const DealTabs = () => {
                   Lorem ipsum dolor sit amet consectetur. Ultricies porttitor amet quis faucibus in sapien phasellus tincidunt. Urna nunc vitae donec purus est arcu posuere sed.
                 </li>
               </ul>
-              <img src="/chart.svg" className="hidden lg:block"/>
+              <img src="/Chart.svg" className="hidden lg:block"/>
             </div>
           </div>
         )}

@@ -17,7 +17,7 @@ const StatBox: React.FC<StatBoxProps> = ({ icon, end, suffix = '', text }) => {
   
 
   return (
-    <div ref={ref} className="xl:w-1/3 w-full lg:px-24 px-10 py-12">
+    <div ref={ref} className="xl:w-1/3 w-full lg:px-24 px-8 py-12">
       <div className="text-center">
         <img src={icon} alt="Stat Icon" className='inline' />
         <h2 className="text-[#1C3C36] lg:text-[56px] text-[40px] my-5 font-['Outfit-Bold'] leading-snug">
@@ -33,7 +33,7 @@ const StatBox: React.FC<StatBoxProps> = ({ icon, end, suffix = '', text }) => {
 const Stats = () => {
   const t = useTranslations('stats');
   return (
-    <div className="px-20 lg:my-24 my-9">
+    <div className=" px-5 lg:my-24 my-9 lg:px-20">
       <div className="flex flex-wrap" style={{ boxShadow: '0px 0px 20px 0px #FF522129' }}>
         <StatBox icon="/icons/hand-shake.svg" end={10} suffix="+" text={t('ManufacturersOnboarded')} />
         <StatBox icon="/icons/construction.svg" end={25} suffix="%" text={t('GrowthRate')} />

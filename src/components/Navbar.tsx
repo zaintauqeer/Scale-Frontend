@@ -17,7 +17,7 @@ export default function Navbar() {
   const basePath = '/' + pathWithoutLocale;
 
   return (
-    <nav className='lg:px-20 px-8 relative'> 
+    <nav className='lg:px-20 px-8 relative z-20'> 
       <div className="flex items-center justify-between w-full py-4">
         {/* Logo */}
         <div className="flex-shrink-0">
@@ -77,7 +77,7 @@ export default function Navbar() {
             onClick={() => setIsMenuOpen(false)}
             className="self-end p-2"
           >
-            <img src="icons/close-icon.svg" alt="Close menu" className="w-6 h-6" />
+            <img src="/icons/close-icon.svg" alt="Close menu" className="w-6 h-6" />
           </button>
           
           <div className="flex flex-col space-y-4 mt-8">

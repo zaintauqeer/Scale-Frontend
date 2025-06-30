@@ -6,10 +6,13 @@ const Features = () => {
     return (
         <div className='lg:px-20 px-5 lg:my-24 my-8'>
             <div className="text-center">
-                <div className="flex items-center gap-2 justify-center">
-                    <div className="w-12 h-0.5 bg-[#F15625]"></div>
-                    <span className='uppercase text-[#F15625] font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold'>{t('subTitle')}</span>
-                </div>
+            <div className="flex items-center gap-2 justify-center">
+  <span className='uppercase text-[#F15625] font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold'>
+    {t('subTitle')}
+  </span>
+  <div className="w-12 h-0.5 bg-[#F15625]"></div>
+</div>
+
                 <h2 className='lg:text-5xl text-3xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold my-5'>{t('title')}</h2>
                 <p className='text-[#00000099] text-xl max-w-2xl m-auto'>{t('description')}</p>
                 <div className="lg:mt-14 lg:mb-0 mb-64 mt-64 lg:py-16 relative lg:px-24 px-14 isolate lg:bg-[linear-gradient(90deg,#fff_0%,#fff_10.33%,#1A3D38_10.33%,#1A3D38_90.67%,#fff_90.67%,#fff_100%)] bg-[#1A3D38]">
@@ -25,7 +28,7 @@ const Features = () => {
                         </div>
                         <div className="md:w-1/3 w-full lg:border-e lg:border-b-0 border-b border-dashed border-[#FFFFFF99]">
                             <div className="text-center place-items-center text-white lg:px-15 lg:py-0 py-6">
-                                <img src="/icons/whatsapp.svg" alt="" className='w-[55px]'/>
+                                <img src="/icons/whatsapp.svg" alt="" className='w-[52px]'/>
                                 <h5 className='font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold text-xl mt-6 mb-4'>{t('title2')}</h5>
                                 <p>{t('description2')}</p>
                             </div>

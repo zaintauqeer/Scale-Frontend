@@ -29,7 +29,7 @@ const DealBox = ({
 }) => {
   const t = useTranslations('dealBox');
   return (
-    <div className="mt-10 rounded-sm bg-[#F2F2F2] border border-[#0000000A] p-5">
+    <div className="mt-10 lg:rounded-sm bg-[#F2F2F2] border border-[#0000000A] p-5">
       <div className="bg-white w-full aspect-video flex justify-center items-center">
         <img
           src={image}
@@ -62,18 +62,18 @@ const DealBox = ({
       </div>
       <div className="grid gap-4 grid-cols-2">
         <div>
-          <span className="text-[#666666] lg:text-base text-xs block mb-5">{t('Supplier')}:</span>
+          <span className="text-[#666666] lg:text-base text-xs block mb-3">{t('Supplier')}:</span>
           <div className="flex items-center ">
             <img src={supplierImg} className="w-6 aspect-square rounded-full border border-[#DDDDDD]" alt="" />
             <h5 className="text-[#222222] ms-3 lg:text-xl font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold">{supplierName}</h5>
           </div>
-          <span className="text-[#666666] lg:text-base text-xs block mb-5 mt-6">{t('Minimum Order Quantity')}:</span>
+          <span className="text-[#666666] lg:text-base text-xs block mb-2 mt-6">{t('Minimum Order Quantity')}:</span>
           <h5 className="text-[#222222] lg:text-xl font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold">{minOrder}</h5>
         </div>
         <div>
-          <span className="text-[#666666] lg:text-base text-xs block mb-5">{t('Delivery Timeframe')}:</span>
+          <span className="text-[#666666] lg:text-base text-xs block mb-3">{t('Delivery Timeframe')}:</span>
           <h5 className="text-[#222222] lg:text-xl font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold">{deliveryTimeframe}</h5>
-          <span className="text-[#666666] lg:text-base text-xs block mb-5 mt-6">{t('Delivery')}:</span>
+          <span className="text-[#666666] lg:text-base text-xs block mb-3 mt-6">{t('Delivery')}:</span>
           <h5 className="text-[#222222] lg:text-xl font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold">{delivery}</h5>
         </div>
       </div>

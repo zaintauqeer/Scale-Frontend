@@ -3,7 +3,7 @@
     "id": "al-qassim-cement",
     "image": "/products/product-1.png",
     "title": "Al Qassim Cement",
-    "price": "15,000 SAR",
+    "price": "15,000/Unit",
     "location": "Jeddah, SA",
     "timeLeft": "2 days : 130h : 45m : 23s",
     "participants": [
@@ -23,7 +23,7 @@
     "id": "jaddah-steel-bars",
     "image": "/products/product-2.png",
     "title": "Riyadh Steel Bars",
-    "price": "22,000 SAR",
+    "price": "22,000/Unit",
     "location": "Riyadh, SA",
     "timeLeft": "1 day : 80h : 30m : 10s",
     "participants": [
@@ -43,7 +43,7 @@
     "id": "riyadh-steel-bars",
     "image": "/products/product-3.png",
     "title": "Riyadh Steel Bars",
-    "price": "22,000 SAR",
+    "price": "22,000/Unit ",
     "location": "Riyadh, SA",
     "timeLeft": "1 day : 80h : 30m : 10s",
     "participants": [
@@ -63,7 +63,7 @@
     "id": "Hammad Sons Developers",
     "image": "/products/product-1.png",
     "title": "Riyadh Steel Bars",
-    "price": "22,000 SAR",
+    "price": "22,000/Unit",
     "location": "Riyadh, SA",
     "timeLeft": "1 day : 80h : 30m : 10s",
     "participants": [

@@ -28,15 +28,17 @@ export default function LanguageSwitcher() {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`flex items-center space-x-2 p-2 rounded-md ${pathname === '/' + locale ? 'text-white' : 'text-[#222222]'}`}
+        className={`flex items-center space-x-2 p-2 rounded-md 
+        text-[#222222] lg:${pathname === '/' + locale ? 'text-white' : 'text-[#222222]'} text-[#222222]`}
+      
       >
-        <Image
+        {/* <Image
           src={currentLanguage?.flag || ''}
           alt={`${currentLanguage?.name} flag`}
           width={21}
           height={16}
           className="border border-[#CCCCCC]"
-        />
+        /> */}
         <span>{currentLanguage?.name}</span>
         <svg
           className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`}
@@ -49,25 +51,26 @@ export default function LanguageSwitcher() {
       </button>
 
       {isOpen && (
-        <div className="absolute top-full mt-1 w-full bg-gray-800 rounded-md shadow-lg overflow-hidden">
-          {languages.map((language) => (
-            <button
-              key={language.code}
-              onClick={() => handleChange(language.code)}
-              className="flex items-center space-x-2 w-full p-2 hover:bg-gray-700 text-white"
-            >
-              <Image
-                src={language.flag}
-                alt={`${language.name} flag`}
-                width={20}
-                height={20}
-                className="rounded-sm"
-              />
-              <span>{language.name}</span>
-            </button>
-          ))}
-        </div>
-      )}
+  <div className="absolute top-full mt-1 w-full bg-gray-800 rounded-md shadow-lg overflow-hidden">
+    {languages.map((language) => (
+      <button
+        key={language.code}
+        onClick={() => handleChange(language.code)}
+        className="flex lg:justify-center items-center w-full p-2 hover:bg-gray-700 text-white"
+      >
+        {/* <Image
+          src={language.flag}
+          alt={`${language.name} flag`}
+          width={20}
+          height={20}
+          className="rounded-sm"
+        /> */}
+        <span>{language.name}</span>
+      </button>
+    ))}
+  </div>
+)}
+
     </div>
   );
 }

@@ -81,12 +81,14 @@
     "q3": "When will my order be delivered?",
     "q4": "What happens if the group deal doesn’t reach the target?",
     "q5": "How do I place an order?",
-    "a1": "Scale is built for construction material yards that want to save on purchasing. It’s also for suppliers and manufacturers who want to sell larger volumes more easily."
+    "a1": "Scale is built for retailers that want to save on purchasing. It’s also for suppliers and manufacturers who want to sell larger volumes more easily."
   },
   "footer":{
     "copyright":"© 2025 SCALE Inc. All rights reserved."
   },
   "dealOfTheMonth":{
+    "dealOfTheMonth": "Deal of the month",
+    "saveOnMarketPrice": "Save 40% on market prices",
     "endsIn": "Ends in:",
     "viewDeals": "View Deals"
   },

@@ -9,8 +9,9 @@ const HowItWorks = () => {
         <div id='how-it-works' className='lg:px-20 px-5 lg:my-24 my-8 mt-8'>
             <div className="text-center">
                 <div className="flex items-center gap-2 justify-center">
-                    <div className="w-12 h-0.5 bg-[#F15625]"></div>
+                    
                     <span className='uppercase text-[#F15625] lg:text-base text-xs font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold'>{t('subtitle')}</span>
+                    <div className="w-12 h-0.5 bg-[#F15625]"></div>
                 </div>
                 <h2 className='lg:text-5xl text-3xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold my-5'>{t('title')}</h2>
                 <p className='text-[#00000099] text-xl lg:max-w-2xl m-auto'>{t('description')}</p>
@@ -57,10 +58,16 @@ const HowItWorks = () => {
                         </div>
                     </div>
                 </div>
-                <div className="lg:w-1/2 w-full place-items-center lg:ps-10 border-s border-[#0000001F]">
+                {/* <div className="lg:w-1/2 w-full place-items-center lg:ps-10 border-s border-[#0000001F]">
                     <img className='rtl:hidden max-w-full' src="/products.png" alt="" />
                     <img className='ltr:hidden max-w-full' src="/products-ar.png" alt="" />
-                </div>
+                </div> */}
+
+<div className="hidden lg:block lg:w-1/2 place-items-center lg:ps-10 border-s border-[#0000001F]">
+  <img className="rtl:hidden max-w-full" src="/products.png" alt="" />
+  <img className="ltr:hidden max-w-full" src="/products-ar.png" alt="" />
+</div>
+
             </div>
         </div>
     )

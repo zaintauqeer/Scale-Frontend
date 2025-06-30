@@ -17,7 +17,11 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Scale",
   description: "",
+  icons: {
+    icon: "/favicon.png", // Path to your favicon in /public
+  },
 };
+
 
 async function RootLayout({
   children,
@@ -31,13 +35,27 @@ async function RootLayout({
     notFound();
   }
   return (
-    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
-      <body className={`${outfit.variable} antialiased`}>
-        <NextIntlClientProvider>
-          {children}
-        </NextIntlClientProvider>
-      </body>
-    </html>
+  //   <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+      
+  //     <body className={`${outfit.variable} antialiased`}>
+  //       <NextIntlClientProvider>
+  //         {children}
+  //       </NextIntlClientProvider>
+  //     </body>
+  //   </html>
+  // );
+
+  <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <link rel="icon" href="/favicon.png" />
+    <title>Scale</title>
+  </head>
+  <body className={`${outfit.variable} antialiased`}>
+    <NextIntlClientProvider>
+      {children}
+    </NextIntlClientProvider>
+  </body>
+</html>
   );
 }
 
