@@ -28,16 +28,16 @@ export default function Navbar() {
 
         {/* Desktop Menu - hidden on mobile */}
         <div className={`hidden lg:flex items-center space-x-6 text-xl ${basePath === '/' ? 'text-white' : 'text-[#222222]'}`}>
-          <Link href="/deals" className={`${basePath === '/deals' ? 'text-[#F05526]' : ''} `}>
+          <Link href={`/${pathname?.split('/')[1]}/deals`} className={`${basePath === '/deals' ? 'text-[#F05526]' : ''} `}>
             {t('deals')}
           </Link>
-          <Link href="/#how-it-works" className={`${basePath === '/how-it-works' ? 'text-[#F05526]' : ''}`}>
+          <Link href={`/${pathname?.split('/')[1]}/#how-it-works`} className={`${basePath === '/how-it-works' ? 'text-[#F05526]' : ''}`}>
             {t('howItWorks')}
           </Link>
-          <Link href="/#about-us" className={`${basePath === '/about-us' ? 'text-[#F05526]' : ''}`}>
+          <Link href={`/${pathname?.split('/')[1]}/#about-us`} className={`${basePath === '/about-us' ? 'text-[#F05526]' : ''}`}>
             {t('about')}
           </Link>
-          <Link href="/#contact-us" className={`${basePath === '/contact-us' ? 'text-[#F05526]' : ''}`}>
+          <Link href={`/${pathname?.split('/')[1]}/#contact-us`} className={`${basePath === '/contact-us' ? 'text-[#F05526]' : ''}`}>
             {t('contactUs')}
           </Link>
         </div>
