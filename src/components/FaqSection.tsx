@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { useTranslations } from 'next-intl';
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 type FAQItem = {
@@ -12,6 +13,11 @@ type FAQItem = {
 
 const FaqSection: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const pathname = usePathname();
+
+    // Extract the path without locale prefix
+    const pathWithoutLocale = pathname?.split("/").slice(2).join("/");
+    const basePath = "/" + pathWithoutLocale;
 
   const toggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -58,7 +64,7 @@ const FaqSection: React.FC = () => {
           <div className="bg-[#F05526] py-5 px-6 mt-10 rounded-xl">
             <h4 className="flex items-center gap-x-2 text-white lg:text-xl font-[Outfit-Bold] rtl:font-sans rtl:font-bold"><img src="icons/chat-icon.svg" alt="" /> You have different questions?</h4>
             <p className="lg:text-lg mt-2 text-[#FFFFFF99]">Our team will answer all your questions,we ensure a quick responce</p>
-            <Link href="#contact-us" className="lg:py-3 lg:px-11 py-2 px-4 text-[#1A3D38] font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold bg-[#FFFFFF] rounded-sm inline-block mt-5">Contact our team</Link>
+            <Link href= {`/${pathname?.split("/")[1]}/#contact-us`} className="lg:py-3 lg:px-11 py-2 px-4 text-[#1A3D38] font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold bg-[#FFFFFF] rounded-sm inline-block mt-5">Contact our team</Link>
           </div>
         </div>
 

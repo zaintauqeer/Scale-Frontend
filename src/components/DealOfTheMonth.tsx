@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
+// import { usePathname } from "next/navigation";
 
 type DealItem = {
   title: string;
@@ -13,8 +14,6 @@ interface DealBoxProps {
   subText: string;
   endTime: string;
 }
-
-
 
 const DealBox: React.FC<DealBoxProps> = ({ title, subText, endTime }) => {
   const calculateTimeLeft = () => {
