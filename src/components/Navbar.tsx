@@ -21,7 +21,7 @@ export default function Navbar() {
       <div className="flex items-center justify-between w-full py-4">
         {/* Logo */}
         <div className="flex-shrink-0">
-          <Link href="/">
+          <Link href={`/${pathname?.split("/")[1]}/`}>
             <img src="/logo.png" className="lg:w-60 w-24" alt="" />
           </Link>
         </div>
