@@ -13,9 +13,6 @@ const HeroSection = () => {
   const g = useTranslations("global");
   const pathname = usePathname();
 
-
-  
-
   const slides = [
     {
       title: t("title"),
@@ -50,7 +47,7 @@ const HeroSection = () => {
             >
               <div className="absolute -z-10 inset-0 bg-black/50 rounded-[20px]"></div>
 
-              <div className="flex mt-auto">
+              <div className="flex mt-auto w-full">
                 <div className="text-white lg:w-1/2 relative lg:pt-24 pt-12">
                   <h1 className="lg:text-[64px] text-3xl lg:leading-16 font-bold">
                     {parse(slide.title)}
