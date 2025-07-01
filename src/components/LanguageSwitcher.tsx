@@ -3,7 +3,7 @@
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
 import { useState } from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 export default function LanguageSwitcher() {
   const locale = useLocale();
@@ -28,8 +28,10 @@ export default function LanguageSwitcher() {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`flex items-center space-x-2 p-2 rounded-md 
-        text-[#222222] lg:${pathname === '/' + locale ? 'text-white' : 'text-[#222222]'} text-[#222222]`}
+        className={`flex items-center space-x-2 p-2 rounded-md ${
+          pathname === '/' + locale ? 'text-black lg:text-white' : 'text-[#222222] lg:text-[#222222]'
+        }`}
+        
       
       >
         {/* <Image

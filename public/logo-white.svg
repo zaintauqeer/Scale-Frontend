@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 238.76 104.44">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        font-family: Gordita-Regular, Gordita;
+        font-size: 75.47px;
+      }
+
+      .cls-4 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: .5px;
+      }
+
+      .cls-2 {
+        font-family: Poppins-Light, Poppins;
+        font-size: 9.11px;
+        font-weight: 300;
+      }
+
+      .cls-5 {
+        font-family: Poppins-Regular, Poppins;
+        font-size: 68.53px;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="m0,69.24v-17.97l3.99-4.02c-1.33-.02-2.66-.05-3.99-.07v-16.94L20.01,8.24h28.01v17.98l-3.02,3.02,3.02,2.02v15.96l-18.96,22.02S0,69.24,0,69.24Z"/>
+  <text class="cls-1" transform="translate(62.12 65.24)"><tspan class="cls-5" x="0" y="0">sc</tspan><tspan class="cls-3" x="77.37" y="0">a</tspan><tspan class="cls-5" x="117.29" y="0">le</tspan></text>
+  <circle class="cls-4" cx="231.39" cy="12.66" r="4.43"/>
+  <text class="cls-2" transform="translate(228.91 15.79)"><tspan x="0" y="0">R</tspan></text>
+</svg>

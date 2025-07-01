@@ -95,7 +95,7 @@ export default function Navbar() {
             <Link href="/#contact-us" className={`${basePath === '/contact-us' ? 'text-[#F05526]' : ''} text-lg`}>
               {t('contactUs')}
             </Link>
-            <div className="mt-4">
+            <div className="lg:mt-4">
               <LanguageSwitcher />
             </div>
           </div>

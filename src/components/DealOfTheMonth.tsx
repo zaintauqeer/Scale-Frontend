@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 type DealItem = {
@@ -15,13 +14,7 @@ interface DealBoxProps {
   endTime: string;
 }
 
-const deals: DealItem[] = [
-  {
-    title: "Deal of the month",
-    subText: "Save 40% on market prices",
-    endTime: new Date(Date.now() + 12 * 60 * 60 * 1000).toISOString(),
-  },
-];
+
 
 const DealBox: React.FC<DealBoxProps> = ({ title, subText, endTime }) => {
   const calculateTimeLeft = () => {
