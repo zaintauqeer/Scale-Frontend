@@ -55,7 +55,7 @@ const DetailDealBox = ({
   return (
     <div className="lg:px-20 px-5 py-14 flex flex-col lg:flex-row gap-x-12">
       {/* Images Section */}
-      <div className="flex flex-col gap-5 w-full lg:w-5/12">
+      <div className="flex flex-col gap-5 w-full lg:w-5/12" dir='ltr'>
         {/* Main Image */}
         <div className="bg-[#CCCCCC] rounded-sm overflow-hidden">
           <div className="overflow-hidden" ref={emblaRef}>
