@@ -11,9 +11,6 @@ const SmallBanner = () => {
   const pathname = usePathname();
 
 
-   // Extract the path without locale prefix
-   const pathWithoutLocale = pathname?.split("/").slice(2).join("/");
-   const basePath = "/" + pathWithoutLocale;
   return (
     <div className='bg-[#1A3D38] lg:py-[117px] lg:px-[103px] px-[37px] py-[45px]'>
       <div className="flex flex-wrap gap-y-14 items-center">

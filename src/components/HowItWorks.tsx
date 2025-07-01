@@ -10,9 +10,7 @@ const HowItWorks = () => {
   const t = useTranslations("howItWorks");
   const g = useTranslations("global");
 
-  // Extract the path without locale prefix
-  const pathWithoutLocale = pathname?.split("/").slice(2).join("/");
-  const basePath = "/" + pathWithoutLocale;
+  
   return (
     <div id="how-it-works" className="lg:px-20 px-5 lg:my-24 my-8 mt-8">
       <div className="text-center">

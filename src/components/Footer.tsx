@@ -11,9 +11,7 @@ const Footer = () => {
 
   const pathname = usePathname();
 
-  // Extract the path without locale prefix
-  const pathWithoutLocale = pathname?.split("/").slice(2).join("/");
-  const basePath = "/" + pathWithoutLocale;
+
   return (
     <div className="bg-[#0A1816] lg:pt-[72px] lg:px-20 px-5 lg:pb-11 pb-7 pt-10">
       <div className="text-center place-items-center">

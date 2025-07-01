@@ -15,9 +15,7 @@ const FaqSection: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const pathname = usePathname();
 
-    // Extract the path without locale prefix
-    const pathWithoutLocale = pathname?.split("/").slice(2).join("/");
-    const basePath = "/" + pathWithoutLocale;
+  
 
   const toggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);

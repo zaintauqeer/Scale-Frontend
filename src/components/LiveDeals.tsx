@@ -11,9 +11,6 @@ const LiveDeals = () => {
   const t = useTranslations("liveDeals");
   const pathname = usePathname();
 
-  // Extract the path without locale prefix
-  const pathWithoutLocale = pathname?.split("/").slice(2).join("/");
-  const basePath = "/" + pathWithoutLocale;
   return (
     <div className="lg:px-20 lg:my-20 my-8 py-14">
       <div className="">

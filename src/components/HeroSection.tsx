@@ -13,9 +13,8 @@ const HeroSection = () => {
   const g = useTranslations("global");
   const pathname = usePathname();
 
-  // Extract the path without locale prefix
-  const pathWithoutLocale = pathname?.split("/").slice(2).join("/");
-  const basePath = "/" + pathWithoutLocale;
+
+  
 
   const slides = [
     {
