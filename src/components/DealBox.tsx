@@ -8,7 +8,7 @@ const DealBox = ({
   timeLeft,
 
   progress,
-  supplierImg,
+  // supplierImg,
   supplierName,
   minOrder,
   deliveryTimeframe,
@@ -21,7 +21,7 @@ const DealBox = ({
   timeLeft: string;
 
   progress: number;
-  supplierImg: string;
+  // supplierImg: string;
   supplierName: string;
   minOrder: string;
   deliveryTimeframe: string;
@@ -67,12 +67,12 @@ const DealBox = ({
             {t("Supplier")}:
           </span>
           <div className="flex items-center ">
-            <img
+            {/* <img
               src={supplierImg}
               className="w-6 aspect-square rounded-full border border-[#DDDDDD]"
               alt=""
-            />
-            <h5 className="text-[#222222] ms-3 lg:text-xl font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold">
+            /> */}
+            <h5 className="text-[#222222] lg:text-xl font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold">
               {supplierName}
             </h5>
           </div>

@@ -14,6 +14,7 @@
     "description": "Join construction material group deals through WhatsApp in just a few taps."
   },
   "deals": {
+    "loading": "Loading...",
     "notFound": "Deal not found"
   },
   "stats":{
@@ -111,6 +112,7 @@
     "Delivery":"Delivery",
     "Participants":"Participants",
     "Join now":"Join now",
+    "Buy now":"Buy now",
     "Share":"Share",
     "for more to join":"for more to join"
   },
