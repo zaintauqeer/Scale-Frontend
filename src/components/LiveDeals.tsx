@@ -213,7 +213,7 @@ interface Deal {
   endDate?: string;
   deliveryArea?: string;
   supplier: { en: string };
-  [key: string]: any; // to allow extra fields without error
+  key: string; // to allow extra fields without error
 }
 
 const LiveDeals: React.FC = () => {
