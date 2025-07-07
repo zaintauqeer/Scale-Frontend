@@ -69,7 +69,7 @@ interface Deal {
 
 export default function DealDetails() {
   const t = useTranslations('deals');
-  const params = useParams();
+  
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -84,17 +84,16 @@ function handleBuyNow(deal: Deal) {
 }
   
   // Debug: Log everything
-  console.log("🔍 All params:", params);
+  
   console.log("🔍 Pathname:", pathname);
   console.log("🔍 Search params:", searchParams.toString());
   
-  // Try multiple approaches to get the ID
-  let dealId: string | undefined;
+  const params = useParams() as { dealId?: string; id?: string; slug?: string; ['deal-id']?: string };
+
+  // Method 1: From params
+  let dealId: string | undefined = params.dealId || params.id || params.slug || params['deal-id'];
   
-  // Method 1: From params (dynamic route)
-  dealId = params.dealId || params.id || params.slug || params['deal-id'];
-  
-  // Method 2: From URL path (extract last segment)
+  // Method 2: From pathname
   if (!dealId && pathname) {
     const segments = pathname.split('/').filter(Boolean);
     dealId = segments[segments.length - 1];
@@ -102,8 +101,9 @@ function handleBuyNow(deal: Deal) {
   
   // Method 3: From search params
   if (!dealId) {
-    dealId = searchParams.get('id') || searchParams.get('dealId');
+    dealId = searchParams.get('id') || searchParams.get('dealId') || undefined;
   }
+  
   
   // Convert to string if it's an array
   const dealIdString = Array.isArray(dealId) ? dealId[0] : dealId;
@@ -158,7 +158,8 @@ function handleBuyNow(deal: Deal) {
   
         console.log("📋 Extracted items:", items);
   
-        const found = items.find((d: any) => d._id === id);
+        // const found = items.find((d: any) => d._id === id);
+        const found = items.find((d: Deal) => d._id === id);
         console.log("🎯 Found deal:", found);
   
         setDeal(found ?? null);
