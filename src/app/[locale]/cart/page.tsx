@@ -67,7 +67,6 @@ export default function CartPage() {
       itemId: cartItem._id,
       quantity: form.quantity,
     };
-
     try {
       const res = await fetch("https://scale-gold.vercel.app/api/orders", {
         method: "POST",
