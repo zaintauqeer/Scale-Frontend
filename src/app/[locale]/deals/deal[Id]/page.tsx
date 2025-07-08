@@ -74,14 +74,22 @@ export default function DealDetails() {
   const searchParams = useSearchParams();
 
   const router = useRouter();
-
-function handleBuyNow(deal: Deal) {
-  // 🛒 Save to localStorage
-  localStorage.setItem("cart", JSON.stringify([deal]));
-
-  // 🚀 Go to checkout
-  router.push("/en/checkout");
-}
+  function handleBuyNow(deal: Deal) {
+    const cartItem = {
+      _id: deal._id,
+      title: { en: deal.title.en },
+      pricePerUnit: deal.pricePerUnit,
+    };
+  
+    localStorage.setItem("cart", JSON.stringify([cartItem]));
+  
+    // Clear any previous form data if needed
+    localStorage.removeItem("cartForm");
+  
+    // 🚀 Go to checkout
+    router.push("/en/cart");
+  }
+  
   
   // Debug: Log everything
   
@@ -123,7 +131,8 @@ function handleBuyNow(deal: Deal) {
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hrs = Math.floor((diff / (1000 * 60 * 60)) % 24);
     const mins = Math.floor((diff / (1000 * 60)) % 60);
-    return `${days}d ${hrs}h ${mins}m`;
+    const secs = Math.floor((diff / (1000 * 60)) % 60);
+    return `${days} days: ${hrs}h: ${mins}m :${secs}s`;
   }
 
   // 🔧 Helper: Format dates

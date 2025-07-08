@@ -1,83 +1,82 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 /* ---------------- Types ---------------- */
 interface CartItem {
-  _id: string;                 // comes from deal detail
+  _id: string; // comes from deal detail
   title: { en: string };
   pricePerUnit: number;
 }
 
 interface FormState {
-  username:  string;
-  location:  string;           // delivery address / city, etc.
-  email:     string;
-  quantity:  number;
+  username: string;
+  location: string; // delivery address / city, etc.
+  email: string;
+  quantity: number;
 }
 
 export default function CheckoutPage() {
   /* ---------------- State ---------------- */
   const [cartItem, setCartItem] = useState<CartItem | null>(null);
   const [form, setForm] = useState<FormState>({
-    username: '',
-    location: '',
-    email:    '',
+    username: "",
+    location: "",
+    email: "",
     quantity: 1,
   });
 
   const router = useRouter();
 
-  /* ---------------- Load selected deal ---------------- */
   useEffect(() => {
-    const stored = localStorage.getItem('cart');
-    if (stored) {
-      const parsed: CartItem[] = JSON.parse(stored);
-      setCartItem(parsed[0]);                // single‑item cart for now
+    const storedItem = localStorage.getItem("cart");
+    const storedForm = localStorage.getItem("cartForm");
+
+    if (storedItem && storedForm) {
+      const parsed: CartItem[] = JSON.parse(storedItem);
+      setCartItem(parsed[0]);
+      setForm(JSON.parse(storedForm));
     }
   }, []);
 
   /* ---------------- Hard‑coded userId (replace later) ---------------- */
-  const userId = '64e26d831a5df515f33c4cb9';
+  const userId = "64e26d831a5df515f33c4cb9";
 
   /* ---------------- Submit order ---------------- */
   const handlePlaceOrder = async () => {
     if (!cartItem) {
-      alert('No item in cart.');
+      alert("No item in cart.");
       return;
     }
 
     /* Payload names exactly as your backend expects */
     const payload = {
-      userId,                          // string
-      username: form.username,         // string
-      email:    form.email,            // string
-      location: form.location,         // string
-      itemId:   cartItem._id,          // string (product/deal id)
-      quantity: form.quantity,         // number
+      userId, // string
+      username: form.username, // string
+      email: form.email, // string
+      location: form.location, // string
+      itemId: cartItem._id, // string (product/deal id)
+      quantity: form.quantity, // number
     };
 
     try {
-      const res = await fetch(
-        'https://scale-gold.vercel.app/api/orders',
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
-        }
-      );
+      const res = await fetch("https://scale-gold.vercel.app/api/orders", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
 
       if (res.ok) {
-        alert('✅ Order placed successfully!');
-        localStorage.removeItem('cart');
-        router.push('/en/thank-you');
+        alert("✅ Order placed successfully!");
+        localStorage.removeItem("cart");
+        router.push("/en/thank-you");
       } else {
-        alert('❌ Failed to place order. Please try again.');
+        alert("❌ Failed to place order. Please try again.");
       }
     } catch (err) {
       console.error(err);
-      alert('Something went wrong.');
+      alert("Something went wrong.");
     }
   };
 
@@ -100,9 +99,7 @@ export default function CheckoutPage() {
               type="text"
               placeholder="Full Name"
               value={form.username}
-              onChange={(e) =>
-                setForm({ ...form, username: e.target.value })
-              }
+              onChange={(e) => setForm({ ...form, username: e.target.value })}
               className="w-full border rounded p-2"
             />
 
@@ -110,9 +107,7 @@ export default function CheckoutPage() {
               type="text"
               placeholder="Location / Address"
               value={form.location}
-              onChange={(e) =>
-                setForm({ ...form, location: e.target.value })
-              }
+              onChange={(e) => setForm({ ...form, location: e.target.value })}
               className="w-full border rounded p-2"
             />
 
@@ -120,9 +115,7 @@ export default function CheckoutPage() {
               type="email"
               placeholder="Email"
               value={form.email}
-              onChange={(e) =>
-                setForm({ ...form, email: e.target.value })
-              }
+              onChange={(e) => setForm({ ...form, email: e.target.value })}
               className="w-full border rounded p-2"
             />
 

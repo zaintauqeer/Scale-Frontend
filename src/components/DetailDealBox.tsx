@@ -361,7 +361,7 @@ const DetailDealBox: React.FC<DetailDealBoxProps> = ({
         <div className="flex gap-4 mt-12">
           <button
             onClick={onBuyNow}
-            className="bg-[#F05526] flex-auto text-white px-6 py-3 rounded font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold hover:bg-[#d63f1e] transition-colors"
+            className="bg-[#F05526] flex-auto cursor-pointer  text-white px-6 py-3 rounded font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold hover:bg-[#d63f1e] transition-colors"
           >
             {t("Buy now")}
           </button>
