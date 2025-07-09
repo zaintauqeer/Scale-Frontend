@@ -71,7 +71,7 @@ const HeroSection = () => {
                       {g("orderViaWhatsapp")}
                     </Link>
                   </div>
-                </div>
+                </div> 
 
                 <div className="lg:w-1/2 lg:flex hidden justify-end items-end">
                   <Link
