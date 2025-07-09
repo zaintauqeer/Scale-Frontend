@@ -63,7 +63,7 @@ const HeroSection = () => {
                       {g("viewLiveDeals")}
                     </Link>
                     <Link
-                      href="https://wa.me/966551324666"
+                      href="https://wa.me/966551324666?text=hello"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-white lg:px-11 px-4 lg:py-5 py-2.5 rounded-sm inline-block menu-btn lg:grow-0 grow leading-[1.2] lg:text-xl text-xs font-['Outfit-SemiBold'] border rtl:font-sans rtl:font-semibold border-white"
@@ -75,7 +75,7 @@ const HeroSection = () => {
 
                 <div className="lg:w-1/2 lg:flex hidden justify-end items-end">
                   <Link
-                    href="https://wa.me/966551324666"
+                    href="https://wa.me/966551324666?text=hello"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="max-w-52 text-center flex justify-center flex-col items-center gap-5 "
