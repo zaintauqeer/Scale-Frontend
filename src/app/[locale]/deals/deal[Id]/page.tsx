@@ -77,18 +77,19 @@ export default function DealDetails() {
   function handleBuyNow(deal: Deal) {
     const cartItem = {
       _id: deal._id,
-      title: { en: deal.title.en },
+      title: {
+        en: deal.title.en,
+        ar: (deal as any).title?.ar || deal.title.en, // ✅ Try Arabic if available
+      },
       pricePerUnit: deal.pricePerUnit,
     };
   
     localStorage.setItem("cart", JSON.stringify([cartItem]));
-  
-    // Clear any previous form data if needed
     localStorage.removeItem("cartForm");
   
-    // 🚀 Go to checkout
     router.push("/en/cart");
   }
+  
   
   
   // Debug: Log everything
