@@ -86,7 +86,7 @@ const HeroSection = () => {
                       className="w-16"
                     />
                     <p className="text-white">
-                      Check the deals and join them in less than 10 seconds
+                    {t("dealAndJoin")}
                     </p>
                   </Link>
                 </div>

@@ -11,7 +11,8 @@
   },
   "hero": {
     "title": "Get Bulk Prices. <br /> Without Bulk Orders.",
-    "description": "Join construction material group deals through WhatsApp in just a few taps."
+    "description": "Join construction material group deals through WhatsApp in just a few taps.",
+    "dealAndJoin":"Check the deals and join them in less than 10 seconds"
   },
   "deals": {
     "loading": "Loading...",
