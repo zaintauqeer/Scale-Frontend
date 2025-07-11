@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import Stats from "@/components/Stats";
 import HowItWorks from "@/components/HowItWorks";
-import AboutUs from "@/components/AboutUs";
+// import AboutUs from "@/components/AboutUs";
 import Features from "@/components/Features";
 import Testimonials from "@/components/Testimonials";
 import ContactUs from "@/components/contactUs";
@@ -19,7 +19,7 @@ export default function Home() {
       <HeroSection/>
       <Stats/>
       <HowItWorks/>
-      <AboutUs/>
+      {/* <AboutUs/> */}
       <Features/>
       <Testimonials/>
       <ContactUs/>

@@ -20,7 +20,7 @@
   },
   "stats":{
     "MaterialsProcessed":"Materials processed",
-    "GrowthRate":"Growth rate",
+    "GrowthRate":"Average Price Reduction",
     "ManufacturersOnboarded":"Manufacturers onboarded",
     "tons":"Tons"
   },
@@ -53,8 +53,11 @@
     "subTitle":"Testimonials",
     "title":"What Do Our Buyers Say?",
     "testimonialTitle": "“WhatsApp makes the whole process easy.”",
+    "testimonialTitle2": "“I now order cheaper than any supplier I’ve dealt with.”",
+
     "testimonialDescription": "I love getting premium products at unbeatable prices just by joining a group deal. It’s simple, transparent, and the savings are real. I've saved hundreds already. The group-buying model makes so much sense. I got a gadget for 40% less than retail because I joined a deal with others. It's a win-win for everyone!",
     "testimonialName": "· Qasim Abdullah",
+    "testimonialName2": "·Ahmad Malik",
     "testimonialPosition": "· Construction Material Yard,"
   },
   "contactUs":{
@@ -86,7 +89,21 @@
     "q3": "When will my order be delivered?",
     "q4": "What happens if the group deal doesn’t reach the target?",
     "q5": "How do I place an order?",
-    "a1": "Scale is built for retailers that want to save on purchasing. It’s also for suppliers and manufacturers who want to sell larger volumes more easily."
+    "q6":"Is there a minimum order quantity? ",
+    "q7":"How will I know when a deal is successful?",
+    "q8":"Is delivery included in the price? ",
+    "q9":"Can I place a direct order without joining a group deal? ",
+    "q10":"Where is the service available? ",
+    "a1": "Who is Scale for? Scale is built for construction material yards that want to save on purchasing. It’s also for suppliers and manufacturers who want to sell larger volumes more easily.",
+    "a2":"How does group buying help yards? By combining orders, yards gain more buying power, unlocking better prices and deals from suppliers.",
+    "a3":"When will my order be delivered? Your order will be delivered within the timeframe you choose upon joining the deal.",
+    "a4":"What happens if the group deal doesn’t reach the target? If the deal doesn’t reach the required quantity, you choose:Either get a refund or use the same amount to join another deal for the same or a different material.",
+    "a5":"How do I place an order? Just send your request on WhatsApp and  we’ll handle the rest.",
+    "a6":"Yes, each group deal has its own minimum, shown in the deal details.",
+    "a7":"We’ll notify you as soon as the deal is full and confirmed for delivery.",
+    "a8":"Yes, delivery is included in the listed price.",
+    "a9":"Not at this phase, We currently support group orders only.",
+    "a10":"Currently, we operate in Riyadh only. More cities coming soon. "
   },
   "footer":{
     "copyright":"© 2025 SCALE Inc. All rights reserved."
@@ -105,7 +122,8 @@
       "Aggregate and Sand": "Aggregate and Sand",
       "Block": "Block",
       "Cement": "Cement",
-      "Wood": "Wood"
+      "Wood": "Wood",
+      "NoLiveDeals":"No Live Deal Available"
   },
   "dealBox":{
     "Time Left": "Time Left",
@@ -142,6 +160,23 @@
     "p7":"Product images are for reference only. Please review product specs and descriptions carefully before joining a deal.",
     "Payment Guidelines":"Payment Guidelines",
     "guidelinesPara":"To secure your spot in this group deal, we kindly ask you to complete the payment in advance using the secure link we’ll send after you join. This helps us confirm your participation and include your order in the collective shipment with others. Once your payment is successfully received, your order will be officially locked in at the discounted price — no surprises or hidden charges. You’ll receive a confirmation receipt via email or WhatsApp, along with updates about the next steps in the fulfillment process. If you have any questions during or after payment, our support team is just a message away and happy to assist. Thank you for being part of the ter shopping starts here!"
+  },
+  "checkout":{
+    "yourCart":"Your Cart",
+    "productSummary":" Product Summary",
+    "customerInformation":"Customer Information",
+    "product":"Product",
+    "pricePerUnit":"Price Per Unit",
+    "total":"Total",
+    "fName":"Full Name",
+    "email":"Email",
+    "address":"Location / Address",
+    "contactNumber":"Contact Number(eg.,+96XXXXXXXXXX)",
+    "proceedToCheckout":"Proceed to Checkout",
+    "sar":"SAR",
+    "checkout":"Checkout",
+    "placeOrder":"Place Order",
+    "price":"Price"
   }
 
 }

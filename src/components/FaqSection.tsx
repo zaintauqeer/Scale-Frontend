@@ -43,6 +43,26 @@ const FaqSection: React.FC = () => {
       question: t('q5'),
       answer: t('a5'),
     },
+    {
+      question: t('q6'),
+      answer: t('a6'),
+    },
+    {
+      question: t('q7'),
+      answer: t('a7'),
+    },
+    {
+      question: t('q8'),
+      answer: t('a8'),
+    },
+    {
+      question: t('q9'),
+      answer: t('a9'),
+    },
+    {
+      question: t('q10'),
+      answer: t('a10'),
+    },
   ];
 
   return (
@@ -68,9 +88,9 @@ const FaqSection: React.FC = () => {
 
         <div className="lg:pe-10 lg:w-4/6 w-full lg:ps-7">
           <div className="">
-            <div className="space-y-4">
+            <div className="space-y-2">
               {faqs.map((faq, index) => (
-                <div key={index} className="bg-[#F4F4F4] rounded-xl p-5">
+                <div key={index} className="bg-[#F4F4F4] rounded-xl px-5 py-3">
                   <button
                     onClick={() => toggle(index)}
                     className="w-full flex justify-between items-center text-left"

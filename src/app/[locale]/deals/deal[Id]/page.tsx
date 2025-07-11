@@ -37,141 +37,114 @@
 
 
 
-'use client';
+"use client";
 
-import React, { useEffect, useState } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
-import DetailDealBox from '@/components/DetailDealBox';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import DealTabs from '@/components/DealTabs';
-import { useTranslations } from 'next-intl';
-import { useParams, usePathname } from 'next/navigation';
-
+import React, { useEffect, useState } from "react";
+import { useRouter, usePathname } from "next/navigation";
+import DetailDealBox from "@/components/DetailDealBox";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import DealTabs from "@/components/DealTabs";
+import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 
 interface Deal {
   _id: string;
   featureImage: string;
   images?: string[];
-  title: { en: string };
-  pricePerUnit: number;
-  location: { en: string };
+  title: { en: string; ar: string };
+  pricePerUnit?: number;
+  location: { en: string; ar: string };
   endDate?: string;
   startDate?: string;
   quantityOrder?: number;
   minorder?: number;
-  supplier: { en: string };
-  termsEn?: string;
+  supplier: { en: string; ar: string };
   deliveryArea?: string;
+  description?: { en: string; ar: string };
+  termsAndNotes?: { en: string; ar: string };
+  paymentInstructions?: { en: string; ar: string };
+  whatsappMessages?: { en: string; ar: string };
+  prefilledMessages?: { en: string; ar: string };
+  unit?: { en: string; ar: string };
 }
 
-
-
 export default function DealDetails() {
-  const t = useTranslations('deals');
-  
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
+  const t = useTranslations("deals");
+  const params = useParams();
   const router = useRouter();
-  function handleBuyNow(deal: Deal) {
-    const cartItem = {
-      _id: deal._id,
-      title: {
-        en: deal.title.en,
-        ar: (deal as any).title?.ar || deal.title.en, // ✅ Try Arabic if available
-      },
-      pricePerUnit: deal.pricePerUnit,
-    };
-  
-    localStorage.setItem("cart", JSON.stringify([cartItem]));
-    localStorage.removeItem("cartForm");
-  
-    router.push("/en/cart");
-  }
+  const pathname = usePathname();
+  const { locale } = params as { locale: string };
   
   
-  
-  // Debug: Log everything
-  
-  console.log("🔍 Pathname:", pathname);
-  console.log("🔍 Search params:", searchParams.toString());
-  
-  const params = useParams() as { dealId?: string; id?: string; slug?: string; ['deal-id']?: string };
+  let id = params?.id as string | undefined;
 
-  // Method 1: From params
-  let dealId: string | undefined = params.dealId || params.id || params.slug || params['deal-id'];
-  
-  // Method 2: From pathname
-  if (!dealId && pathname) {
-    const segments = pathname.split('/').filter(Boolean);
-    dealId = segments[segments.length - 1];
+  // Fallback to pathname if id is not found
+  if (!id && pathname) {
+    const segments = pathname.split("/").filter(Boolean);
+    id = segments[segments.length - 1];
+    console.log("🔍 Fallback id from pathname:", id);
   }
-  
-  // Method 3: From search params
-  if (!dealId) {
-    dealId = searchParams.get('id') || searchParams.get('dealId') || undefined;
-  }
-  
-  
-  // Convert to string if it's an array
-  const dealIdString = Array.isArray(dealId) ? dealId[0] : dealId;
-  
-  console.log("🧪 Final dealId:", dealIdString);
-  
+
   const [deal, setDeal] = useState<Deal | null>(null);
   const [loading, setLoading] = useState(true);
 
-  // 🔧 Helper: Calculate time left
-  function timeLeftUntil(endDateStr?: string) {
-    if (!endDateStr) return '—';
+  function handleBuyNow(deal: Deal) {
+    const cartItem = {
+      _id: deal._id,
+      title: deal.title,
+      pricePerUnit: deal.pricePerUnit,
+    };
+    localStorage.setItem("cart", JSON.stringify([cartItem]));
+    localStorage.removeItem("cartForm");
+    router.push(`/${locale}/cart`);
+  }
+
+  // Helper: Calculate time left (fixed to include seconds)
+  function calculateTimeLeft(endDateStr?: string): string {
+    if (!endDateStr) return "—";
     const now = new Date();
     const end = new Date(endDateStr);
     const diff = end.getTime() - now.getTime();
-    if (diff <= 0) return 'Expired';
+    if (diff <= 0) return t("Expired");
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hrs = Math.floor((diff / (1000 * 60 * 60)) % 24);
     const mins = Math.floor((diff / (1000 * 60)) % 60);
-    const secs = Math.floor((diff / (1000 * 60)) % 60);
-    return `${days} days: ${hrs}h: ${mins}m :${secs}s`;
+    const secs = Math.floor(diff / 1000) % 60; // Correct seconds calculation
+    return `${days}days:${hrs}h:${mins}m:${secs}s`;
   }
 
-  // 🔧 Helper: Format dates
-  function formatDate(dateStr?: string) {
-    if (!dateStr) return '—';
-    return new Date(dateStr).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
+  // Helper: Format dates in English regardless of locale
+  function formatDate(dateStr?: string): string {
+    if (!dateStr) return "—";
+    return new Date(dateStr).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
     });
   }
 
-  // ✅ Fetch the deal
   useEffect(() => {
-    async function fetchDeal(id: string) {
+    async function fetchDeal() {
       try {
         console.log("🟡 Fetching for ID:", id);
-        const res = await fetch('https://scale-gold.vercel.app/api/items/Allitems', {
-          cache: 'no-store',
+        const res = await fetch("https://scale-gold.vercel.app/api/items/Allitems", {
+          cache: "no-store",
         });
-  
+
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
-  
+
         const data = await res.json();
         console.log("📦 Raw data:", data);
-  
-        const items = Array.isArray(data)
-          ? data
-          : data.deals || data.items || [];
-  
+
+        const items = Array.isArray(data) ? data : data.deals || data.items || [];
         console.log("📋 Extracted items:", items);
-  
-        // const found = items.find((d: any) => d._id === id);
+
         const found = items.find((d: Deal) => d._id === id);
         console.log("🎯 Found deal:", found);
-  
+
         setDeal(found ?? null);
       } catch (error) {
         console.error("❌ Error fetching deal:", error);
@@ -179,30 +152,23 @@ export default function DealDetails() {
         setLoading(false);
       }
     }
-  
-    if (dealIdString) {
-      fetchDeal(dealIdString);
+
+    if (id) {
+      fetchDeal();
     } else {
-      console.log("❌ No dealId found anywhere");
+      console.log("❌ No dealId found");
       setLoading(false);
     }
-  }, [dealIdString]);
+  }, [id]);
 
-  // 🕑 Loading
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center py-20 text-gray-500">
-          <div className="mb-4">{t('loading')}…</div>
-          <div className="text-sm text-gray-400">
-            Looking for deal ID: {dealIdString || 'undefined'}
-          </div>
-        </div>
+      <div className="flex justify-center items-center min-h-screen">
+        <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-[#F05526]"></div>
       </div>
     );
   }
 
-  // ❌ Deal not found
   if (!deal) {
     return (
       <>
@@ -211,10 +177,10 @@ export default function DealDetails() {
         </div>
         <main className="min-h-screen p-8">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl font-bold mb-6">{t('notFound')}</h1>
+            <h1 className="text-3xl font-bold mb-6">{t("notFound")}</h1>
             <div className="text-gray-500">
-              <p>Deal ID: {dealIdString || 'undefined'}</p>
-              <p>Current URL: {pathname}</p>
+              <p>Deal ID: {id || "undefined"}</p>
+              <p>Current URL: {window.location.href}</p>
             </div>
           </div>
         </main>
@@ -223,47 +189,47 @@ export default function DealDetails() {
     );
   }
 
-  // ✅ Calculate progress
   const progress =
     deal.quantityOrder && deal.minorder
-      ? Math.min(Math.round((deal.quantityOrder / deal.minorder) * 100), 100)
+      ? Math.min(Math.round((deal.minorder / deal.quantityOrder) * 100), 100)
       : 0;
 
-  // ✅ Render deal details
   return (
     <>
       <div className="mt-8">
         <Navbar />
       </div>
-
-      <DetailDealBox
+      <DetailDealBox 
         image={
-          deal.featureImage?.startsWith('http')
+          deal.featureImage?.startsWith("http")
             ? deal.featureImage
-            : `https://scale-gold.vercel.app/uploads/${deal.featureImage || ''}`
+            : `https://scale-gold.vercel.app/uploads/${deal.featureImage || ""}`
         }
         images={
           deal.images?.map((img) =>
-            img.startsWith('http') ? img : `https://scale-gold.vercel.app/uploads/${img}`
+            img.startsWith("http") ? img : `https://scale-gold.vercel.app/uploads/${img}`
           ) || []
         }
-        title={deal.title?.en || 'Untitled'}
-        price={deal.pricePerUnit ? `${deal.pricePerUnit}/Unit` : t('Ask')}
-        location={deal.location?.en || '—'}
-        timeLeft={timeLeftUntil(deal.endDate)}
+        title={deal.title}
+        price={deal.pricePerUnit ? `${deal.pricePerUnit}${deal.unit ? `/${deal.unit[locale]}` : "/Unit"}` : t("Ask")}
+        location={deal.location}
+        timeLeft={deal.endDate || ""}
         progress={progress}
-        supplierName={deal.supplier?.en || '—'}
-        minOrder={`${deal.minorder?.toString()} Units` || '—'}
+        supplierName={deal.supplier}
+        minOrder={deal.minorder?.toString() || "—"}
         deliveryTimeframe={
           deal.startDate && deal.endDate
             ? `${formatDate(deal.startDate)} — ${formatDate(deal.endDate)}`
-            : 'N/A'
+            : "N/A"
         }
-        delivery={deal.deliveryArea || deal.termsEn || 'Included'}
+        delivery={deal.deliveryArea || "Included"}
         onBuyNow={() => handleBuyNow(deal)}
       />
-
-      <DealTabs />
+      <DealTabs
+        description={deal.description || { en: "No description available", ar: "لا يوجد وصف متاح" }}
+        termsAndNotes={deal.termsAndNotes || { en: "No terms available", ar: "لا توجد شروط متاحة" }}
+        paymentInstructions={deal.paymentInstructions || { en: "No payment instructions available", ar: "لا توجد تعليمات دفع متاحة" }}
+      />
       <Footer />
     </>
   );

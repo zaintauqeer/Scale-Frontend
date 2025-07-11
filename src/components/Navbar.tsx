@@ -46,12 +46,12 @@ export default function Navbar() {
           >
             {t("howItWorks")}
           </Link>
-          <Link
+          {/* <Link
             href={`/${pathname?.split("/")[1]}/#about-us`}
             className={`${basePath === "/about-us" ? "text-[#F05526]" : ""}`}
           >
             {t("about")}
-          </Link>
+          </Link> */}
           <Link
             href={`/${pathname?.split("/")[1]}/#contact-us`}
             className={`${basePath === "/contact-us" ? "text-[#F05526]" : ""}`}
