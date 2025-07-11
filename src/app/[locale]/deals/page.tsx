@@ -27,14 +27,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import DealOfTheMonth from "@/components/DealOfTheMonth";
 import LiveDeals from "@/components/LiveDeals";
-import { useRouter } from "next/navigation";
 
 const Deals = () => {
-  const router = useRouter();
-
-  const handleNavigate = (path: string) => {
-    router.push(path);
-  };
+ 
 
   return (
     <>
@@ -42,7 +37,7 @@ const Deals = () => {
         <Navbar />
       </div>
       <DealOfTheMonth />
-      <LiveDeals onNavigate={handleNavigate} />
+      <LiveDeals />
       <Footer />
     </>
   );

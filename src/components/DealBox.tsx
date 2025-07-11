@@ -157,6 +157,7 @@ const DealBox: React.FC<DealBoxProps> = ({
   minOrder,
   deliveryTimeframe,
   delivery,
+  whatsappMessages,
   onBuyNow,
 }) => {
   const t = useTranslations("dealBox");
@@ -267,9 +268,9 @@ const DealBox: React.FC<DealBoxProps> = ({
           >
             {t("Buy now")}
           </button>
-        <button className="bg-[#F05526] text-center flex-auto text-white px-6 py-4 rounded-sm menu-btn leading-[1.2] font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold border border-[#F05525]">
+        <a href={`https://wa.me/966551324666?text=${whatsappMessages[locale]}`} className="bg-[#F05526] text-center flex-auto text-white px-6 py-4 rounded-sm menu-btn leading-[1.2] font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold border border-[#F05525]">
           {t("Join now")}
-        </button>
+        </a>
         <button className="w-max whitespace-nowrap text-[#222222] px-6 py-[14px] rounded-sm menu-btn leading-[1.2] font-[Outfit-SemiBold] rtl:font-sans rtl:font-semibold border border-[#DDDDDD] flex gap-x-2 items-center">
           <img src="/icons/share-icon.svg" alt="" />
            
