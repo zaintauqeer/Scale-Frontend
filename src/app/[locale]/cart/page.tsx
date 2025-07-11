@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 
 interface CartItem {
   _id: string;
