@@ -585,7 +585,7 @@ const DetailDealBox: React.FC<DetailDealBoxProps> = ({
           >
             {t("Buy now")}
           </button>
-          <button className="bg-[#F05526] flex-auto text-white py-3 rounded font-semibold hover:bg-[#d63f1e] transition-colors cursor-pointor">
+          <button className="bg-[#F05526] flex-auto text-white py-3 rounded text-center font-semibold hover:bg-[#d63f1e] transition-colors cursor-pointor">
             {t("Join now")}
           </button>
           <button className="border border-gray-300 px-3 py-3 rounded font-semibold flex items-center gap-2 hover:bg-gray-50 transition-colors cursor-pointor">

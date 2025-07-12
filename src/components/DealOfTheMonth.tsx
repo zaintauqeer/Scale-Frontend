@@ -47,7 +47,7 @@ const DealBox: React.FC<DealBoxProps> = ({ title, subText, endTime }) => {
   const t = useTranslations("dealOfTheMonth");
 
   return (
-    <div className="relative bg-[#D26200] w-full lg:rounded-lg px-6 md:px-10 py-10 min-h-[320px] md:flex flex-col md:flex-row justify-between items-center overflow-visible mt-10">
+    <div className="relative bg-[#F05526] w-full lg:rounded-lg px-6 md:px-10 py-10 min-h-[320px] md:flex flex-col md:flex-row justify-between items-center overflow-visible mt-10">
       {/* Left Content */}
       <div className="text-white md:w-1/2 w-full space-y-4 z-10">
         <img src="/Logo-White.png" alt="Logo" className="w-36 mb-8" />
