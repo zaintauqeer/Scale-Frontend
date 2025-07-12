@@ -28,7 +28,7 @@ export default function CartPage() {
     location: "",
     email: "",
     contactNumber: "", // added
-    quantity: cartItem?.interval ?? 1,
+    quantity: cartItem?.interval ?? 0,
   });
 
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
@@ -153,6 +153,12 @@ export default function CartPage() {
               <div className="flex justify-between items-center">
                 <span className="font-medium text-lg">{t("pricePerUnit")}:</span>
                 <span className="text-lg">{cartItem.pricePerUnit} {t("sar")}</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="font-medium text-lg">{t("quantity")}:</span>
+                <span className="text-lg">
+                  {form.quantity}
+                </span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="font-medium text-lg"> {t("total")}:</span>

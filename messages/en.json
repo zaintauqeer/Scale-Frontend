@@ -167,6 +167,7 @@
     "customerInformation":"Customer Information",
     "product":"Product",
     "pricePerUnit":"Price Per Unit",
+    "quantity":"Quantity",
     "total":"Total",
     "fName":"Full Name",
     "email":"Email",

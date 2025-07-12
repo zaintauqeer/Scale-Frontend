@@ -166,6 +166,7 @@
     "customerInformation":"معلومات العملاء",
     "product":"منتج",
     "pricePerUnit":"سعر الوحدة",
+    "quantity":"الكمية",
     "total":"المجموع",
     "fName":"الاسم الكامل",
     "email":"بريد إلكتروني",
