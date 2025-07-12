@@ -10,6 +10,7 @@ interface CartItem {
   _id: string;
   title: { en: string; ar: string }; // ✅ title.ar is required
   pricePerUnit: number;
+  interval?: number;
 }
 
 interface FormState {
@@ -27,7 +28,7 @@ export default function CartPage() {
     location: "",
     email: "",
     contactNumber: "", // added
-    quantity: 1,
+    quantity: cartItem?.interval ?? 1,
   });
 
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
@@ -42,6 +43,7 @@ export default function CartPage() {
     }
     const storedForm = localStorage.getItem("cartForm");
     if (storedForm) {
+      console.log(storedForm)
       setForm(JSON.parse(storedForm));
     }
   }, []);
@@ -108,8 +110,9 @@ export default function CartPage() {
     }
   };
 
-  const handleQuantityChange = (change: number) => {
-    const newQuantity = Math.max(1, form.quantity + change);
+  const handleQuantityChange = (symbol: "+" | "-") => {
+
+    const newQuantity = Math.max(1, form.quantity + (symbol === "+" ? (cartItem?.interval || 1) : -(cartItem?.interval || 1)));
     setForm({ ...form, quantity: newQuantity });
   };
 
@@ -202,14 +205,14 @@ export default function CartPage() {
 
             <div className="flex items-center gap-4">
               <button
-                onClick={() => handleQuantityChange(-1)}
+                onClick={() => handleQuantityChange("-")}
                 className="w-10 h-10 bg-gray-200 rounded-full text-xl font-bold text-gray-700 hover:bg-gray-300 transition duration-200"
               >
                 -
               </button>
               <span className="text-lg font-semibold">{form.quantity}</span>
               <button
-                onClick={() => handleQuantityChange(1)}
+                onClick={() => handleQuantityChange("+")}
                 className="w-10 h-10 bg-gray-200 rounded-full text-xl font-bold text-gray-700 hover:bg-gray-300 transition duration-200"
               >
                 +

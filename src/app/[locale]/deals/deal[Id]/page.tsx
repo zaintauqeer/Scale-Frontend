@@ -15,6 +15,7 @@ interface Deal {
   images?: string[];
   title: { en: string; ar: string };
   pricePerUnit?: number;
+  interval?: number;
   location: { en: string; ar: string };
   endDate?: string;
   startDate?: string;
@@ -56,6 +57,7 @@ export default function DealDetails() {
       _id: deal._id,
       title: deal.title,
       pricePerUnit: deal.pricePerUnit,
+      interval:deal.interval,
     };
     localStorage.setItem("cart", JSON.stringify([cartItem]));
     localStorage.removeItem("cartForm");
