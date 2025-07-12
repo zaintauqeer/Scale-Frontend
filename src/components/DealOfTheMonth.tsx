@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useTranslations } from "next-intl";
 // import { usePathname } from "next/navigation";
 
@@ -15,36 +15,36 @@ interface DealBoxProps {
   endTime: string;
 }
 
-const DealBox: React.FC<DealBoxProps> = ({ title, subText, endTime }) => {
-  const calculateTimeLeft = () => {
-    const difference = +new Date(endTime) - +new Date();
-    if (difference <= 0) return { hours: "00", minutes: "00", seconds: "00" };
+const DealBox: React.FC<DealBoxProps> = ({ title, subText, }) => {
+  // const calculateTimeLeft = () => {
+  //   const difference = +new Date(endTime) - +new Date();
+  //   if (difference <= 0) return { hours: "00", minutes: "00", seconds: "00" };
 
-    const hours = String(
-      Math.floor((difference / (1000 * 60 * 60)) % 24)
-    ).padStart(2, "0");
-    const minutes = String(Math.floor((difference / 1000 / 60) % 60)).padStart(
-      2,
-      "0"
-    );
-    const seconds = String(Math.floor((difference / 1000) % 60)).padStart(
-      2,
-      "0"
-    );
+  //   const hours = String(
+  //     Math.floor((difference / (1000 * 60 * 60)) % 24)
+  //   ).padStart(2, "0");
+  //   const minutes = String(Math.floor((difference / 1000 / 60) % 60)).padStart(
+  //     2,
+  //     "0"
+  //   );
+  //   const seconds = String(Math.floor((difference / 1000) % 60)).padStart(
+  //     2,
+  //     "0"
+  //   );
 
-    return { hours, minutes, seconds };
-  };
+  //   return { hours, minutes, seconds };
+  // };
 
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  // const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
-    return () => clearInterval(timer);
-  }, [endTime]);
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setTimeLeft(calculateTimeLeft());
+  //   }, 1000);
+  //   return () => clearInterval(timer);
+  // }, [endTime]);
 
-  const t = useTranslations("dealOfTheMonth");
+  // const t = useTranslations("dealOfTheMonth");
 
   return (
     <div className="relative bg-[#F05526] w-full lg:rounded-lg px-6 md:px-10 py-10 min-h-[320px] md:flex flex-col md:flex-row justify-between items-center overflow-visible mt-10">
@@ -53,12 +53,12 @@ const DealBox: React.FC<DealBoxProps> = ({ title, subText, endTime }) => {
         <img src="/Logo-White.png" alt="Logo" className="w-36 mb-8" />
         <h2 className="text-5xl font-bold">{title}</h2>
         <p className="text-[28px]">{subText}</p>
-        <div>
+        {/* <div>
           <p className="text-[32px] mb-1">{t("endsIn")}</p>
           <p className="text-[32px] font-semibold">
             {timeLeft.hours}h : {timeLeft.minutes}m : {timeLeft.seconds}s
           </p>
-        </div>
+        </div> */}
         {/* <Link
           href="#"
           className="mt-4 inline-block bg-white text-[#F05526] font-semibold text-[16px] px-15 py-2 rounded-sm hover:bg-gray-100 transition"

@@ -1,42 +1,3 @@
-// 'use client'
-// import React from 'react';
-// import deals from '@/components/deals.json';
-// import DetailDealBox from '@/components/DetailDealBox';
-// import Navbar from '@/components/Navbar';
-// import Footer from '@/components/Footer';
-// import DealTabs from '@/components/DealTabs';
-// import { useTranslations } from 'next-intl';
-// type Props = {
-//   params: Promise<{ id: string}>;
-//   // locale: string;
-// }
-// export default function DealDetails({ params }: Props) {
-//   const {id} = React.use(params)
-//   const deal = deals.find((d: { id: string }) => d.id === id);
-//   const t = useTranslations('deals');
-//   if (!deal) {
-//     return (
-//       <main className="min-h-screen p-8">
-//         <div className="max-w-4xl mx-auto">
-//           <h1 className="text-3xl font-bold mb-6">{t('notFound')}</h1>
-//         </div>
-//       </main>
-//     );
-//   }
-//   return (
-//     <>
-//       <div className='mt-8'>
-//         <Navbar />
-//       </div>
-//       <DetailDealBox {...deal} />
-//       <DealTabs />
-//       <Footer />
-//     </>
-//   );
-// }
-
-
-
 "use client";
 
 import React, { useEffect, useState } from "react";
@@ -58,6 +19,7 @@ interface Deal {
   endDate?: string;
   startDate?: string;
   quantityOrder?: number;
+  totalSold?: number;
   minorder?: number;
   supplier: { en: string; ar: string };
   deliveryArea?: string;
@@ -101,18 +63,18 @@ export default function DealDetails() {
   }
 
   // Helper: Calculate time left (fixed to include seconds)
-  function calculateTimeLeft(endDateStr?: string): string {
-    if (!endDateStr) return "—";
-    const now = new Date();
-    const end = new Date(endDateStr);
-    const diff = end.getTime() - now.getTime();
-    if (diff <= 0) return t("Expired");
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hrs = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const mins = Math.floor((diff / (1000 * 60)) % 60);
-    const secs = Math.floor(diff / 1000) % 60; // Correct seconds calculation
-    return `${days}days:${hrs}h:${mins}m:${secs}s`;
-  }
+  // function calculateTimeLeft(endDateStr?: string): string {
+  //   if (!endDateStr) return "—";
+  //   const now = new Date();
+  //   const end = new Date(endDateStr);
+  //   const diff = end.getTime() - now.getTime();
+  //   if (diff <= 0) return t("Expired");
+  //   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  //   const hrs = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  //   const mins = Math.floor((diff / (1000 * 60)) % 60);
+  //   const secs = Math.floor(diff / 1000) % 60; // Correct seconds calculation
+  //   return `${days}days:${hrs}h:${mins}m:${secs}s`;
+  // }
 
   // Helper: Format dates in English regardless of locale
   function formatDate(dateStr?: string): string {
@@ -137,10 +99,10 @@ export default function DealDetails() {
         }
 
         const data = await res.json();
-        console.log("📦 Raw data:", data);
+        console.table(data);
 
         const items = Array.isArray(data) ? data : data.deals || data.items || [];
-        console.log("📋 Extracted items:", items);
+        console.table(items);
 
         const found = items.find((d: Deal) => d._id === id);
         console.log("🎯 Found deal:", found);
@@ -190,8 +152,8 @@ export default function DealDetails() {
   }
 
   const progress =
-    deal.quantityOrder && deal.minorder
-      ? Math.min(Math.round((deal.minorder / deal.quantityOrder) * 100), 100)
+    deal.quantityOrder && deal.totalSold
+      ? Math.min(Math.round((deal.totalSold / deal.quantityOrder) * 100), 100)
       : 0;
 
   return (
@@ -199,7 +161,12 @@ export default function DealDetails() {
       <div className="mt-8">
         <Navbar />
       </div>
-      <DetailDealBox 
+      <DetailDealBox
+        description={deal.description || { en: "No description available", ar: "لا يوجد وصف متاح" }}
+        termsAndNotes={deal.termsAndNotes || { en: "No terms available", ar: "لا توجد شروط متاحة" }}
+        paymentInstructions={deal.paymentInstructions || { en: "No payment instructions available", ar: "لا توجد تعليمات دفع متاحة" }}
+        whatsappMessages={deal.whatsappMessages || { en: "", ar: "" }}
+        prefilledMessages={deal.prefilledMessages || { en: "", ar: "" }}
         image={
           deal.featureImage?.startsWith("http")
             ? deal.featureImage
@@ -211,7 +178,7 @@ export default function DealDetails() {
           ) || []
         }
         title={deal.title}
-        price={deal.pricePerUnit ? `${deal.pricePerUnit}${deal.unit ? `/${deal.unit[locale]}` : "/Unit"}` : t("Ask")}
+        price={deal.pricePerUnit ? `${deal.pricePerUnit}${deal.unit ? `/${deal.unit[locale as keyof typeof deal.unit]}` : "/Unit"}` : t("Ask")}
         location={deal.location}
         timeLeft={deal.endDate || ""}
         progress={progress}
